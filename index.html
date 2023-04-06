@@ -1,28 +1,29 @@
 ---
 layout: home
-image: images/logo.png
 ---
-## Objectives
+<body>
 
-<div>
+  <div style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
+    <h1 id="typewriter" style="text-align: center;">
+  </div>
 
-    <div style="float: left; margin: 0px 10px 10px 0px;">
-        <a href="https://docs.google.com/document/d/1ibm_4fqSgfnRZKhUns2vVe83MVes70Ts/edit?usp=sharing&ouid=115023546255406346351&rtpof=true&sd=true">
-            <img atl="Course Framework" src="{{site.baseurl}}/images/apcsp.png" title="Course Framework inspired by Domingo David"
-            width="200">
-        </a>
-    </div>
-    <div>
-        <hr>
-        <p>
-            This Conceptual Framework teaches College Boards 5 Big Ideas of AP Computer Science Principles, Python, JavaScript, and Web Site application development together in an integrated fashion.  The purpose is to teach College Board requirements while adding languages, tools, frameworks, and methodologies that meet Career Technical Education (CTE) needs.  The outcome is preparing the High School student for the AP Test and simultaneously building the skills required for Computer Science internships.
-        </p>
-        <hr>
-    </div>
+</body>
 
-</div>
+<script>
+  var i = 0;
+  var txt = "Welcome to the best franchise in APCS history.";
 
+  var speed = 150;
+  function typeWriter(x) {
 
-## Blogs
+    if (i <= txt.length) {
+      document.getElementById("typewriter").innerHTML = txt.substring(0, i)
+      i++;
+      setTimeout(typeWriter, speed);
+    }
 
+  }
 
+  typeWriter();
+
+</script>
