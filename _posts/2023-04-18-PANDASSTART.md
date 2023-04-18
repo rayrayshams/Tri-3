@@ -1,8 +1,9 @@
 ---
-keywords: fastai
-description: The outline for our lesson plan and hacks
+toc: true
+comments: true
 title: Tangible PANDAS
-layout: notebook
+layout: post
+description: The outline for our lesson plan and hacks
 ---
 
 <!DOCTYPE html>
