@@ -6,7 +6,6 @@ layout: post
 description: The outline for our lesson plan and hacks
 ---
 
-<!DOCTYPE html>
 <html>
 <head>
 <style>
