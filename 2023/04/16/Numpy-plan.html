@@ -123,6 +123,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#3.-Basic-array-operations">3. Basic array operations </a></li>
 <li class="toc-entry toc-h1"><a href="#4.-Data-analysis-using-numpy">4. Data analysis using numpy </a>
 <ul>
+<li class="toc-entry toc-h2"><a href="#Hack-Scoring">Hack Scoring </a></li>
 <li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
 </ul>
 </li>
@@ -441,8 +442,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hacks">
-<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+<h2 id="Hack-Scoring">
+<a class="anchor" href="#Hack-Scoring" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack Scoring<a class="anchor-link" href="#Hack-Scoring"> </a>
 </h2>
 <ul>
 <li>0.3 for solving the lesson problem sets (popcorn hacks)</li>
@@ -456,15 +457,69 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Write a Python function that takes a 2D numpy array as input and returns the indices of the rows that contain at least one element that is greater than 10. Test your function on a sample array.</p>
-<p>Given a 1D numpy array a, write a Python function that returns a new array with every other element starting from the second element (i.e., elements with odd indices). Test your function on a sample array.</p>
-<p>Write a Python function that takes a 2D numpy array as input and returns a new array that contains only the columns where the sum of the elements in the column is greater than 5. Test your function on a sample array.</p>
-<p>Given a 2D numpy array a, write a Python function that replaces every element in the array that is less than 0 with 0, and every element that is greater than 10 with 10. Test your function on a sample array.</p>
-<p>Write a Python function that takes a 2D numpy array as input and returns the indices of the elements that are local maxima (i.e., greater than their neighbors in all directions). Test your function on a sample array.</p>
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+<ol>
+<li>
+<p>Write a Python function that takes a 2D numpy array as input and returns the indices of the rows that have at least 1 element greater than 10.</p>
+</li>
+<li>
+<p>Write a Python function that takes a 2D numpy array as input and returns the indices of the elements that are local maxima (greater than their neighbors in both directions).</p>
+</li>
+</ol>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">Greaterthan10</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># write code here</span>
+    <span class="k">return</span>
+
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="n">Greaterthan10</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">LocalMaxima</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># write code here</span>
+    <span class="k">return</span>
+
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">LocalMaxima</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
