@@ -436,9 +436,10 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">'padres.csv'</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span> <span class="c1"># delimeter explains that the values are seperated by commas</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">'files/padres.csv'</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">','</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span>
+
+<span class="c1"># Print the data to verify it was loaded correctly</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
     </div>
@@ -450,16 +451,21 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">/Users/parav/vscode/T3Project/_notebooks/2023-04-16-Numpy-plan.ipynb Cell 14</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell:/Users/parav/vscode/T3Project/_notebooks/2023-04-16-Numpy-plan.ipynb#X16sZmlsZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> data = np.genfromtxt('padres.csv', delimiter=',') # delimeter explains that the values are seperated by commas
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/parav/vscode/T3Project/_notebooks/2023-04-16-Numpy-plan.ipynb#X16sZmlsZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> print(data)
-<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/parav/vscode/T3Project/_notebooks/2023-04-16-Numpy-plan.ipynb#X16sZmlsZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> print(np.mean(data[:, 1]))
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[['Name' 'Position' 'Average' 'HR' 'RBI' 'OPS' 'JerseyNumber']
+ ['MannyMachado' 'ThirdBase' '.298' '32' '102' '.897' '13']
+ ['FernandoTatisJr' 'RightField' '.281' '42' '97' '.975' '23']
+ ['JuanSoto' 'LeftField' '.242' '27' '62' '.853' '22']
+ ['XangerBogaerts' 'Shortstop' '.307' '15' '73' '.833' '2']
+ ['NelsonCruz' 'DesignatedHitter' '.234' '10' '64' '.651' '32']
+ ['MattCarpenter' 'DesignatedHitter' '.305' '15' '37' '1.138' '14']
+ ['JakeCronenworth' 'FirstBase' '.239' '17' '88' '.722' '9']
+ ['Ha-SeongKim' 'SecondBase' '.251' '11' '59' '.708' '7']
+ ['TrentGrisham' 'CenterField' '.184' '17' '53' '.626' '1']
+ ['LuisCampusano' 'Catcher' '.250' '1' '5' '.593' '12']
+ ['AustinNola' 'Catcher' '.251' '4' '40' '.649' '26']
+ ['JoseAzocar' 'Outfield' '.257' '0' '10' '.630' '28']]
+</pre>
 </div>
 </div>
 
