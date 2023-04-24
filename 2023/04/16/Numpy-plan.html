@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Numpy Lesson Plan and Hacks | PetitePandas</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Numpy Lesson Plan and Hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The outline for our lesson plan and hacks" />
+<meta property="og:description" content="The outline for our lesson plan and hacks" />
+<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/2023/04/16/Numpy-plan.html" />
+<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/2023/04/16/Numpy-plan.html" />
+<meta property="og:site_name" content="PetitePandas" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-16T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Numpy Lesson Plan and Hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-16T00:00:00-05:00","datePublished":"2023-04-16T00:00:00-05:00","description":"The outline for our lesson plan and hacks","headline":"Numpy Lesson Plan and Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://paravsalaniwal.github.io/T3Project/2023/04/16/Numpy-plan.html"},"url":"https://paravsalaniwal.github.io/T3Project/2023/04/16/Numpy-plan.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/T3Project/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://paravsalaniwal.github.io/T3Project/feed.xml" title="PetitePandas" /><link rel="shortcut icon" type="image/x-icon" href="/T3Project/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/T3Project/">PetitePandas</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/T3Project/search/">Search</a><a class="page-link" href="/T3Project/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Numpy Lesson Plan and Hacks</h1><p class="page-description">The outline for our lesson plan and hacks</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-16T00:00:00-05:00" itemprop="datePublished">
+        Apr 16, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/paravsalaniwal/T3Project/tree/master/_notebooks/2023-04-16-Numpy-plan.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/T3Project/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/paravsalaniwal/T3Project/master?filepath=_notebooks%2F2023-04-16-Numpy-plan.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/T3Project/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/paravsalaniwal/T3Project/blob/master/_notebooks/2023-04-16-Numpy-plan.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/T3Project/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fparavsalaniwal%2FT3Project%2Fblob%2Fmaster%2F_notebooks%2F2023-04-16-Numpy-plan.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/T3Project/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Lesson-Plan">Lesson Plan </a></li>
+<li class="toc-entry toc-h2"><a href="#What-is-NumPy?">What is NumPy? </a></li>
+<li class="toc-entry toc-h1"><a href="#Getting-Started">Getting Started </a></li>
+<li class="toc-entry toc-h1"><a href="#2.-Using-NumPy-to-create-arrays">2. Using NumPy to create arrays </a></li>
+<li class="toc-entry toc-h1"><a href="#3.-Basic-array-operations">3. Basic array operations </a></li>
+<li class="toc-entry toc-h1"><a href="#4.-Data-analysis-using-numpy">4. Data analysis using numpy </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Hack-Scoring">Hack Scoring </a></li>
+<li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-04-16-Numpy-plan.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lesson-Plan">
+<a class="anchor" href="#Lesson-Plan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lesson Plan<a class="anchor-link" href="#Lesson-Plan"> </a>
+</h2>
+<ul>
+<li>The lesson will cover various topics about Numpy and how to use it to perform various functions<ul>
+<li>How to manipulate pixels on images</li>
+<li>How to manipulate arrays</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="What-is-NumPy?">
+<a class="anchor" href="#What-is-NumPy?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is NumPy?<a class="anchor-link" href="#What-is-NumPy?"> </a>
+</h2>
+<ul>
+<li>Numpy is a <strong>python library</strong> used for working with arrays, matrices, and other mathematical operations</li>
+<li>NumPy stands for <strong>Numerical Python</strong>
+</li>
+<li>Practical applications include <strong>Machine Learning, Data Analysis, Image Processing, and Finance</strong>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Getting-Started">
+<a class="anchor" href="#Getting-Started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started<a class="anchor-link" href="#Getting-Started"> </a>
+</h1>
+<p>We first need to import the library. Run the following line of code.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.-Using-NumPy-to-create-arrays">
+<a class="anchor" href="#2.-Using-NumPy-to-create-arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Using NumPy to create arrays<a class="anchor-link" href="#2.-Using-NumPy-to-create-arrays"> </a>
+</h1>
+<ul>
+<li>We are going to create a numpy <strong>array</strong> using the <strong>np.array()</strong> function.</li>
+<li>Below is an example of a 1D array.</li>
+<li>We can use arrays like these to <strong>store data and indexing</strong>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> 
+<span class="c1"># this creates a 1D array</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1 2 3]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How could you create a 3D array based on knowing how to make a 1D array?</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span> <span class="c1"># organizes it all in a single line of output</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[1 2 3 4 5 6 7 8 9]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># the 1: means "start at row 1 and select all the remaining rows"</span>
+<span class="c1"># the :2 means "select the first two columns"</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[4 5]
+ [7 8]]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="3.-Basic-array-operations">
+<a class="anchor" href="#3.-Basic-array-operations" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Basic array operations<a class="anchor-link" href="#3.-Basic-array-operations"> </a>
+</h1>
+<ul>
+<li>We can do some simple mathematical operations using arrays </li>
+<li>The mathematical functions are operated on the index value of each array. </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># adds each value based on the column the integer is in</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># subtracts each value based on the column the integer is in</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># multiplies each value based on the column the integer is in</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span> <span class="c1"># divides each value based on the column the integer is in</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[5 7 9]
+[-3 -3 -3]
+[ 4 10 18]
+[0.25 0.4  0.5 ]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="4.-Data-analysis-using-numpy">
+<a class="anchor" href="#4.-Data-analysis-using-numpy" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Data analysis using numpy<a class="anchor-link" href="#4.-Data-analysis-using-numpy"> </a>
+</h1>
+<ul>
+<li>Show how numpy can be used for data analysis tasks, such as finding the mean, median, and standard deviation of a dataset</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">19</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="c1"># finds the mean of the dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="c1"># finds the median of the dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="c1"># finds the standard deviation of the dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="c1"># finds the min of the dataset</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">data</span><span class="p">))</span> <span class="c1"># finds the max of the dataset</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10.2
+12.0
+6.04648658313239
+2
+19
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s1">'padres.csv'</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span> <span class="c1"># delimeter explains that the values are seperated by commas</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/Users/parav/vscode/T3Project/_notebooks/2023-04-16-Numpy-plan.ipynb Cell 14</span> in <span class="ansi-cyan-fg">&lt;cell line: 1&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell:/Users/parav/vscode/T3Project/_notebooks/2023-04-16-Numpy-plan.ipynb#X16sZmlsZQ%3D%3D?line=0'&gt;1&lt;/a&gt;</span> data = np.genfromtxt('padres.csv', delimiter=',') # delimeter explains that the values are seperated by commas
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/parav/vscode/T3Project/_notebooks/2023-04-16-Numpy-plan.ipynb#X16sZmlsZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> print(data)
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell:/Users/parav/vscode/T3Project/_notebooks/2023-04-16-Numpy-plan.ipynb#X16sZmlsZQ%3D%3D?line=2'&gt;3&lt;/a&gt;</span> print(np.mean(data[:, 1]))
+
+<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now from learning this, can you find a different way from how we can solve the sum or products of a dataset other than how we learned before?</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hack-Scoring">
+<a class="anchor" href="#Hack-Scoring" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack Scoring<a class="anchor-link" href="#Hack-Scoring"> </a>
+</h2>
+<ul>
+<li>0.3 for solving the lesson problem sets (popcorn hacks)</li>
+<li>0.6 for solving the hacks</li>
+<li>0.1 for going extra (such as showing unique code segments using numpy)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h2>
+<ol>
+<li>
+<p>Write a Python function that takes a 2D numpy array as input and returns the indices of the rows that have at least 1 element greater than 10.</p>
+</li>
+<li>
+<p>Write a Python function that takes a 2D numpy array as input and returns the indices of the elements that are local maxima (greater than their neighbors in both directions).</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">Greaterthan10</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># write code here</span>
+    <span class="k">return</span>
+
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="n">Greaterthan10</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">LocalMaxima</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># write code here</span>
+    <span class="k">return</span>
+
+<span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">LocalMaxima</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+</div>
+
+
+
+  </div><a class="u-url" href="/T3Project/2023/04/16/Numpy-plan.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/T3Project/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://paravsalaniwal.github.io/T3Project/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/T3Project/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>Franchise</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
