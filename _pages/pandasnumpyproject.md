@@ -4,6 +4,8 @@ title: Data Analysis Project
 permalink: /DataAnalysisProject/
 ---
 
+### Click the table headers to sort the entries in descending order. Click the table headers again to reverse the order.
+
 <html>
 <table id="myTable">
   <thead>
