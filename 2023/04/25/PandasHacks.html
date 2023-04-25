@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      6 min read
     
 </span></p>
 
@@ -120,11 +120,26 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Predictive-Analysis">Predictive Analysis </a></li>
 <li class="toc-entry toc-h1"><a href="#Pandas">Pandas </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#What-is-Pandas">What is Pandas </a></li>
-<li class="toc-entry toc-h2"><a href="#Why-Use-Pandas?">Why Use Pandas? </a></li>
-<li class="toc-entry toc-h2"><a href="#What-Can-Pandas-Do?">What Can Pandas Do? </a></li>
+<li class="toc-entry toc-h3"><a href="#What-is-Pandas">What is Pandas </a></li>
+<li class="toc-entry toc-h3"><a href="#Why-Use-Pandas?">Why Use Pandas? </a></li>
+<li class="toc-entry toc-h3"><a href="#What-Can-Pandas-Do?">What Can Pandas Do? </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#Basics-of-Pandas.">Basics of Pandas. </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#DICTIONARIES-AND-DATASETS">DICTIONARIES AND DATASETS </a></li>
+<li class="toc-entry toc-h3"><a href="#Indexing-and-manipulaton-of-data-through-lists.">Indexing and manipulaton of data through lists. </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#Pandas-Classes">Pandas Classes </a></li>
+<li class="toc-entry toc-h1"><a href="#PeriodIndex">PeriodIndex </a></li>
+<li class="toc-entry toc-h1"><a href="#Dataframe-Grouped-By">Dataframe Grouped By </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Categorical">Categorical </a></li>
+<li class="toc-entry toc-h3"><a href="#Timestamp-Class">Timestamp Class </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#CSV-FILES!">CSV FILES! </a></li>
 <li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a></li>
 </ul><!--
 #################################################
@@ -165,27 +180,68 @@ window.onload = wrap_img;
 <h1 id="Pandas">
 <a class="anchor" href="#Pandas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pandas<a class="anchor-link" href="#Pandas"> </a>
 </h1>
-<h2 id="What-is-Pandas">
+<h3 id="What-is-Pandas">
 <a class="anchor" href="#What-is-Pandas" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Pandas<a class="anchor-link" href="#What-is-Pandas"> </a>
-</h2>
-<p>Pandas is a Python library used for working with data sets.</p>
-<p>It has functions for analyzing, cleaning, exploring, and manipulating data.</p>
-<h2 id="Why-Use-Pandas?">
+</h3>
+<p>Pandas is a Python library used for working with data sets. A python library is something  It has functions for analyzing, cleaning, exploring, and manipulating data.</p>
+<h3 id="Why-Use-Pandas?">
 <a class="anchor" href="#Why-Use-Pandas?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why Use Pandas?<a class="anchor-link" href="#Why-Use-Pandas?"> </a>
-</h2>
-<p>Pandas allows us to analyze big data and make conclusions based on statistical theories.</p>
-<p>Pandas can clean messy data sets, and make them readable and relevant.</p>
-<h2 id="What-Can-Pandas-Do?">
+</h3>
+<p>Pandas allows us to analyze big data and make conclusions based on statistical theories. Pandas can clean messy data sets, and make them readable and relevant.Also it is a part of data analysis, and data manipulation.</p>
+<h3 id="What-Can-Pandas-Do?">
 <a class="anchor" href="#What-Can-Pandas-Do?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What Can Pandas Do?<a class="anchor-link" href="#What-Can-Pandas-Do?"> </a>
-</h2>
+</h3>
 <p>Pandas gives you answers about the data. Like:</p>
 <ul>
 <li>Is there a correlation between two or more columns?</li>
-<li>What is average value?</li>
-<li>Max value?</li>
-<li>Min value?</li>
+<li>What is average value</li>
+<li>Max value</li>
+<li>Min value</li>
+<li>How to load data </li>
+<li>Delete data </li>
+<li>Sort Data.</li>
 </ul>
 <p>Pandas are also able to delete rows that are not relevant, or contains wrong values, like empty or NULL values. This is called cleaning the data.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Basics-of-Pandas.">
+<a class="anchor" href="#Basics-of-Pandas." aria-hidden="true"><span class="octicon octicon-link"></span></a>Basics of Pandas.<a class="anchor-link" href="#Basics-of-Pandas."> </a>
+</h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="c1"># What this does is it calls the python pandas library and this code segment is needed whenever incorporating pandas.</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="DICTIONARIES-AND-DATASETS">
+<a class="anchor" href="#DICTIONARIES-AND-DATASETS" aria-hidden="true"><span class="octicon octicon-link"></span></a>DICTIONARIES AND DATASETS<a class="anchor-link" href="#DICTIONARIES-AND-DATASETS"> </a>
+</h4>
+<ul>
+<li>One way you are able to manipulate a pandas data set is by creating a dictionary and calling it as seen with the dict data 1 and pd.dataframe which is a way to print the set.</li>
+</ul>
 
 </div>
 </div>
@@ -199,12 +255,12 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">mydataset</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s1">'cars'</span><span class="p">:</span> <span class="p">[</span><span class="s2">"BMW"</span><span class="p">,</span> <span class="s2">"Volvo"</span><span class="p">,</span> <span class="s2">"Ford"</span><span class="p">],</span>
-  <span class="s1">'passings'</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s1">'teams'</span><span class="p">:</span> <span class="p">[</span><span class="s2">"BARCA"</span><span class="p">,</span> <span class="s2">"REAL"</span><span class="p">,</span> <span class="s2">"ATLETICO"</span><span class="p">],</span>
+  <span class="s1">'standings'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="p">}</span>
 
-<span class="n">myvar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">mydataset</span><span class="p">)</span>
+<span class="n">myvar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">myvar</span><span class="p">)</span>
 </pre></div>
@@ -219,10 +275,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>    cars  passings
-0    BMW         3
-1  Volvo         7
-2   Ford         2
+<pre>      teams  standings
+0     BARCA          1
+1      REAL          2
+2  ATLETICO          3
 </pre>
 </div>
 </div>
@@ -233,6 +289,19 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Indexing-and-manipulaton-of-data-through-lists.">
+<a class="anchor" href="#Indexing-and-manipulaton-of-data-through-lists." aria-hidden="true"><span class="octicon octicon-link"></span></a>Indexing and manipulaton of data through lists.<a class="anchor-link" href="#Indexing-and-manipulaton-of-data-through-lists."> </a>
+</h3>
+<ul>
+<li>With python you can also organize data making it one of its biggest perks through something called indexing? Which is a way to set the 1st column of the table as seen with teh </li>
+</ul>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -240,73 +309,33 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">'Item ID'</span><span class="p">]])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
 
-<span class="nb">print</span><span class="p">()</span>
+<span class="n">score</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="o">/</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">5</span><span class="p">]</span>
 
-<span class="c1">#try two columns and remove the index from print statement</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">'Price'</span><span class="p">,</span><span class="s1">'Item ID'</span><span class="p">]]</span><span class="o">.</span><span class="n">to_string</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<span class="n">myvar</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"math"</span><span class="p">,</span> <span class="s2">"science"</span><span class="p">,</span> <span class="s2">"pe"</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">myvar</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-    
+<div class="output_wrapper">
+<div class="output">
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<div class="output_area">
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'Item ID'</span><span class="p">]))</span>
-
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="c1">#sort the values in reverse order</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'Item ID'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
-</pre></div>
-
-    </div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>math       1.0
+science    1.0
+pe         0.2
+dtype: float64
+</pre>
 </div>
 </div>
 
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Price</span> <span class="o">&gt;</span> <span class="mf">1.49</span><span class="p">])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Price</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">Price</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Price</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">Price</span><span class="o">.</span><span class="n">min</span><span class="p">()])</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -316,26 +345,268 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Hacks">
-<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+<h1 id="Pandas-Classes">
+<a class="anchor" href="#Pandas-Classes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pandas Classes<a class="anchor-link" href="#Pandas-Classes"> </a>
 </h1>
-<blockquote>
-<p>Answer the questions below and write code for the last question. Some questions may require individual research.</p>
-</blockquote>
+<p>Within pandas the library consits of a lot of functions which allow you to manipulate datasets in lists dictionsaries and csv files here are some of the ones we are going to cover (hint: take notes on these)</p>
 <ul>
-<li>What are the key data structures used in Pandas?<ul>
-<li>?</li>
+<li>Series</li>
+<li>Index</li>
+<li>PeriodIndex</li>
+<li>DataframeGroupedBy</li>
+<li>Categorical</li>
+<li>Time Stamp</li>
 </ul>
-</li>
-<li>How can you merge, join, and concatenate data frames in Pandas?<ul>
-<li>?</li>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="PeriodIndex">
+<a class="anchor" href="#PeriodIndex" aria-hidden="true"><span class="octicon octicon-link"></span></a>PeriodIndex<a class="anchor-link" href="#PeriodIndex"> </a>
+</h1>
+<ul>
+<li>This allows for a way to repeat data over time that it occurs as seen from january 2022 to december 2023. You can use Y for years, M for months, and D for days.</li>
 </ul>
-</li>
-<li>How can you optimize the performance of Pandas operations on large datasets?<ul>
-<li>?</li>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+
+<span class="n">time</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">period_range</span><span class="p">(</span><span class="s1">'2022-01'</span><span class="p">,</span> <span class="s1">'2022-12'</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">'M'</span><span class="p">)</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>PeriodIndex(['2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06',
+             '2022-07', '2022-08', '2022-09', '2022-10', '2022-11', '2022-12'],
+            dtype='period[M]')
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Dataframe-Grouped-By">
+<a class="anchor" href="#Dataframe-Grouped-By" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataframe Grouped By<a class="anchor-link" href="#Dataframe-Grouped-By"> </a>
+</h1>
+<ul>
+<li>This allows for you to organize your data and calculate the different functions such as</li>
+<li>count(): returns the number of non-null values in each group.</li>
+<li>sum(): returns the sum of values in each group.</li>
+<li>mean(): returns the mean of values in each group.</li>
+<li>min(): returns the minimum value in each group.</li>
+<li>max(): returns the maximum value in each group.</li>
+<li>median(): returns the median of values in each group.</li>
+<li>var(): returns the variance of values in each group.</li>
+<li>agg(): applies one or more functions to each group and returns a new DataFrame with the results.</li>
 </ul>
-</li>
-<li>Find a certain scenario, topic, or trend which has quantitative data. Store the data in a file and read it in Pandas. Show some analysis of the data.</li>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'Category'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">,</span> <span class="s1">'E'</span><span class="p">,</span> <span class="s1">'F'</span><span class="p">],</span>
+    <span class="s1">'Value'</span><span class="p">:</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">250</span><span class="p">,</span> <span class="mi">156</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">303</span><span class="p">,</span> <span class="mi">253</span><span class="p">,</span> <span class="mi">3014</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+
+<span class="n">grouped</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'Category'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>          Value
+Category       
+E           749
+F          3822
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Categorical">
+<a class="anchor" href="#Categorical" aria-hidden="true"><span class="octicon octicon-link"></span></a>Categorical<a class="anchor-link" href="#Categorical"> </a>
+</h3>
+<ul>
+<li>This sets up a category for something and puts it within the categories and allows for better orginzation </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">colors</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">([</span><span class="s1">'yellow'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">,</span> <span class="s1">'yellow'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="s1">'yellow'</span><span class="p">,</span> <span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'blue'</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">colors</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['yellow', 'orange', 'blue', 'yellow', 'orange']
+Categories (3, object): ['yellow', 'orange', 'blue']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Timestamp-Class">
+<a class="anchor" href="#Timestamp-Class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Timestamp Class<a class="anchor-link" href="#Timestamp-Class"> </a>
+</h3>
+<ul>
+<li>This allows to display a single time which can be useful when working with datasets that deal with time allowing you to manipulate the time you do something and how you do it. </li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+
+<span class="n">timing</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="s1">'2023-02-05 02:00:00'</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">timing</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2023-02-05 02:00:00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="CSV-FILES!">
+<a class="anchor" href="#CSV-FILES!" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSV FILES!<a class="anchor-link" href="#CSV-FILES!"> </a>
+</h1>
+<ul>
+<li>A csv file contains data and within pandas you are able to call the function and you are able to manipulate the data with the certain data classes talked about above. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Name, Position, Average, HR, RBI, OPS, JerseyNumber</li>
+<li>Manny Machado, 3B, .298, 32, 102, .897, 13</li>
+<li>Tatis Jr, RF, .281, 42, 97, .975, 23</li>
+<li>Juan Soto, LF, .242, 27, 62, .853, 22</li>
+<li>Xanger Bogaerts, SS, .307, 15, 73, .833, 2</li>
+<li>Nelson Cruz, DH, .234, 10, 64, .651, 32</li>
+<li>Matt Carpenter, DH, .305, 15, 37, 1.138, 14</li>
+<li>Cronezone, 1B, .239, 17, 88, .722, 9</li>
+<li>Ha-Seong Kim, 2B, .251, 11, 59, .708, 7</li>
+<li>Trent Grisham, CF, .184, 17, 53, .626, 1</li>
+<li>Luis Campusano, C, .250, 1, 5, .593, 12</li>
+<li>Austin Nola, C, .251, 4, 40, .649, 26</li>
+<li>Jose Azocar, OF, .257, 0, 10, .630, 28</li>
 </ul>
 
 </div>
@@ -365,47 +636,42 @@ window.onload = wrap_img;
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>--Duration Top 10---------
-               Name          Position  Average  HR  RBI    OPS  JerseyNumber
-4        NelsonCruz  DesignatedHitter    0.234  10   64  0.651            32
-11       JoseAzocar          Outfield    0.257   0   10  0.630            28
-10       AustinNola           Catcher    0.251   4   40  0.649            26
-1   FernandoTatisJr        RightField    0.281  42   97  0.975            23
-2          JuanSoto         LeftField    0.242  27   62  0.853            22
-5     MattCarpenter  DesignatedHitter    0.305  15   37  1.138            14
-0      MannyMachado         ThirdBase    0.298  32  102  0.897            13
-9     LuisCampusano           Catcher    0.250   1    5  0.593            12
-6   JakeCronenworth         FirstBase    0.239  17   88  0.722             9
-7       Ha-SeongKim        SecondBase    0.251  11   59  0.708             7
---Duration Bottom 10------
-               Name          Position  Average  HR  RBI    OPS  JerseyNumber
-10       AustinNola           Catcher    0.251   4   40  0.649            26
-1   FernandoTatisJr        RightField    0.281  42   97  0.975            23
-2          JuanSoto         LeftField    0.242  27   62  0.853            22
-5     MattCarpenter  DesignatedHitter    0.305  15   37  1.138            14
-0      MannyMachado         ThirdBase    0.298  32  102  0.897            13
-9     LuisCampusano           Catcher    0.250   1    5  0.593            12
-6   JakeCronenworth         FirstBase    0.239  17   88  0.722             9
-7       Ha-SeongKim        SecondBase    0.251  11   59  0.708             7
-3    XangerBogaerts         Shortstop    0.307  15   73  0.833             2
-8      TrentGrisham       CenterField    0.184  17   53  0.626             1
-Name, Position, Average, HR, RBI, OPS, JerseyNumber
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Hacks">
+<a class="anchor" href="#Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks<a class="anchor-link" href="#Hacks"> </a>
+</h1>
+<ul>
+<li>Take notes on content in the notebook file.</li>
+<li>Research another type of class that is used in pandas</li>
+<li>Implement that class with pandas. as seen with the examples above</li>
+</ul>
+<blockquote>
+<p>Answer the questions below and write code for the last question. Some questions may require individual research.</p>
+<ul>
+<li>What are the key data structures used in Pandas?<ul>
+<li>?</li>
+</ul>
+</li>
+<li>How can you merge, join, and concatenate data frames in Pandas?<ul>
+<li>?</li>
+</ul>
+</li>
+<li>How can you optimize the performance of Pandas operations on large datasets?<ul>
+<li>?</li>
+</ul>
+</li>
+<li>Find a certain scenario, topic, or trend which has quantitative data. Store the data in a file and read it in Pandas. Show some analysis of the data.</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
 </div>
 
 
