@@ -25,19 +25,24 @@ permalink: /DataAnalysisProject/
       <td>17</td>
     </tr>
     <tr>
-      <td>Cleveland Cavaliers</td>
-      <td>1970</td>
-      <td>01</td>
+      <td>Brooklyn Nets</td>
+      <td>1976</td>
+      <td>00</td>
     </tr>
     <tr>
-      <td>New Orleans Pelicans</td>
-      <td>2002</td>
+      <td>Charlotte Hornets</td>
+      <td>1988</td>
       <td>00</td>
     </tr>
     <tr>
       <td>Chicago Bulls</td>
       <td>1966</td>
       <td>06</td>
+    </tr>
+    <tr>
+      <td>Cleveland Cavaliers</td>
+      <td>1970</td>
+      <td>01</td>
     </tr>
     <tr>
       <td>Dallas Mavericks</td>
@@ -50,6 +55,11 @@ permalink: /DataAnalysisProject/
       <td>00</td>
     </tr>
     <tr>
+      <td>Detroit Pistons</td>
+      <td>1948</td>
+      <td>03</td>
+    </tr>
+    <tr>
       <td>Golden State Warriors</td>
       <td>1946</td>
       <td>07</td>
@@ -60,6 +70,11 @@ permalink: /DataAnalysisProject/
       <td>02</td>
     </tr>
     <tr>
+      <td>Indiana Pacers</td>
+      <td>1976</td>
+      <td>00</td>
+    </tr>
+    <tr>
       <td>Los Angeles Clippers</td
       ><td>1970</td>
       <td>00</td>
@@ -68,6 +83,11 @@ permalink: /DataAnalysisProject/
       <td>Los Angeles Lakers</td>
       <td>1948</td>
       <td>17</td>
+    </tr>
+    <tr>
+      <td>Memphis Grizzlies</td>
+      <td>1995</td>
+      <td>00</td>
     </tr>
     <tr>
       <td>Miami Heat</td>
@@ -85,8 +105,8 @@ permalink: /DataAnalysisProject/
       <td>00</td>
     </tr>
     <tr>
-      <td>Brooklyn Nets</td>
-      <td>1976</td>
+      <td>New Orleans Pelicans</td>
+      <td>2002</td>
       <td>00</td>
     </tr>
     <tr>
@@ -95,13 +115,13 @@ permalink: /DataAnalysisProject/
       <td>02</td>
     </tr>
     <tr>
-      <td>Orlando Magic</td>
-      <td>1989</td>
-      <td>00</td>
+      <td>Oklahoma City Thunder</td>
+      <td>1967</td>
+      <td>01</td>
     </tr>
     <tr>
-      <td>Indiana Pacers</td>
-      <td>1976</td>
+      <td>Orlando Magic</td>
+      <td>1989</td>
       <td>00</td>
     </tr>
     <tr>
@@ -130,11 +150,6 @@ permalink: /DataAnalysisProject/
       <td>05</td>
     </tr>
     <tr>
-      <td>Oklahoma City Thunder</td>
-      <td>1967</td>
-      <td>01</td>
-    </tr>
-    <tr>
       <td>Toronto Raptors</td>
       <td>1995</td>
       <td>01</td>
@@ -145,24 +160,9 @@ permalink: /DataAnalysisProject/
       <td>00</td>
     </tr>
     <tr>
-      <td>Memphis Grizzlies</td>
-      <td>1995</td>
-      <td>00</td>
-    </tr>
-    <tr>
       <td>Washington Wizards</td>
       <td>1961</td>
       <td>01</td>
-    </tr>
-    <tr>
-      <td>Detroit Pistons</td>
-      <td>1948</td>
-      <td>03</td>
-    </tr>
-    <tr>
-      <td>Charlotte Hornets</td>
-      <td>1988</td>
-      <td>00</td>
     </tr>
   </tbody>
 </table>
