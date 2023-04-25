@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Pandas and Numpy Table Project | PetitePandas</title>
+<title>Data Analysis Project | PetitePandas</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Pandas and Numpy Table Project" />
+<meta property="og:title" content="Data Analysis Project" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Franchise" />
 <meta property="og:description" content="Franchise" />
-<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/pandas&numpyProject/" />
-<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/pandas&numpyProject/" />
+<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/DataAnalysisProject/" />
+<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/DataAnalysisProject/" />
 <meta property="og:site_name" content="PetitePandas" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Pandas and Numpy Table Project" />
+<meta property="twitter:title" content="Data Analysis Project" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Franchise","headline":"Pandas and Numpy Table Project","url":"https://paravsalaniwal.github.io/T3Project/pandas&numpyProject/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Franchise","headline":"Data Analysis Project","url":"https://paravsalaniwal.github.io/T3Project/DataAnalysisProject/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/T3Project/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://paravsalaniwal.github.io/T3Project/feed.xml" title="PetitePandas" /><link rel="shortcut icon" type="image/x-icon" href="/T3Project/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -64,7 +64,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/T3Project/search/">Search</a><a class="page-link" href="/T3Project/about/">About</a><a class="page-link" href="/T3Project/pandas&numpyProject/">Pandas and Numpy Table Project</a></div>
+        <div class="trigger"><a class="page-link" href="/T3Project/search/">Search</a><a class="page-link" href="/T3Project/about/">About</a><a class="page-link" href="/T3Project/DataAnalysisProject/">Data Analysis Project</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -72,65 +72,94 @@ window.onload = wrap_img;
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Pandas and Numpy Table Project</h1>
+    <h1 class="post-title">Data Analysis Project</h1>
   </header>
 
   <div class="post-content">
     <html>
-<table>
-<thead>
+<table id="myTable">
+  <thead>
     <tr>
-    <th onclick="sortTable(0)">Name</th>
-    <th onclick="sortTable(1)">Age</th>
-    <th onclick="sortTable(2)">City</th>
+      <th onclick="sortTable(0)">Name</th>
+      <th onclick="sortTable(1)">Age</th>
+      <th onclick="sortTable(2)">City</th>
     </tr>
-</thead>
-<tbody>
+  </thead>
+  <tbody>
     <tr>
-    <td>John</td>
-    <td>25</td>
-    <td>New York</td>
-    </tr>
-    <tr>
-    <td>Bob</td>
-    <td>30</td>
-    <td>Paris</td>
+      <td>John</td>
+      <td>35</td>
+      <td>New York</td>
     </tr>
     <tr>
-    <td>Alice</td>
-    <td>20</td>
-    <td>London</td>
+      <td>Mary</td>
+      <td>25</td>
+      <td>Los Angeles</td>
     </tr>
-</tbody>
+    <tr>
+      <td>Bob</td>
+      <td>40</td>
+      <td>Chicago</td>
+    </tr>
+  </tbody>
 </table>
 
 <script>
     function sortTable(columnIndex) {
-        let table = document.querySelector('table');
-        let rows = Array.from(table.rows).slice(1); // ignore the header row
-        let ascending = true;
-  
-        rows.sort((rowA, rowB) => {
-            let cellA = rowA.cells[columnIndex].textContent;
-            let cellB = rowB.cells[columnIndex].textContent;
-    
-            if (cellA < cellB) {
-            return ascending ? -1 : 1;
-            } else if (cellA > cellB) {
-            return ascending ? 1 : -1;
-            } else {
-            return 0;
-            }
-        });
-  
-        // Remove existing rows from table and add sorted rows
-        rows.forEach(row => table.tBodies[0].appendChild(row));
-  
-        // Toggle sort order for next click
-        ascending = !ascending;
-    }
-</script>
+  const table = document.getElementById("myTable");
+  const tbody = table.getElementsByTagName("tbody")[0];
+  const rows = tbody.getElementsByTagName("tr");
+  const sortDirection = getSortDirection(columnIndex);
 
+  const sortedRows = Array.from(rows)
+    .sort((rowA, rowB) => {
+      const cellA = rowA.getElementsByTagName("td")[columnIndex];
+      const cellB = rowB.getElementsByTagName("td")[columnIndex];
+      return compareCells(cellA, cellB, sortDirection);
+    });
+
+  for (const row of sortedRows) {
+    tbody.appendChild(row);
+  }
+}
+
+function getSortDirection(columnIndex) {
+  const table = document.getElementById("myTable");
+  const headerRow = table.getElementsByTagName("thead")[0].getElementsByTagName("tr")[0];
+  const headerCell = headerRow.getElementsByTagName("th")[columnIndex];
+
+  if (headerCell.getAttribute("data-sort-direction") === "asc") {
+    headerCell.setAttribute("data-sort-direction", "desc");
+    return "desc";
+  } else {
+    headerCell.setAttribute("data-sort-direction", "asc");
+    return "asc";
+  }
+}
+
+function compareCells(cellA, cellB, sortDirection) {
+  const valueA = cellA.textContent.trim();
+  const valueB = cellB.textContent.trim();
+
+  if (sortDirection === "asc") {
+    if (valueA < valueB) {
+      return -1;
+    } else if (valueA > valueB) {
+      return 1;
+    } else {
+      return 0;
+    }
+  } else {
+    if (valueA < valueB) {
+      return 1;
+    } else if (valueA > valueB) {
+      return -1;
+    } else {
+      return 0;
+    }
+  }
+}
+</script>
 </html>
 
   </div>

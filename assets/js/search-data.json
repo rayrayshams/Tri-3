@@ -151,10 +151,10 @@
 
   
       ,"page4": {
-          "title": "Pandas and Numpy Table Project",
-          "content": "Name Age City . John | 25 | New York | . Bob | 30 | Paris | . Alice | 20 | London | . .",
-          "url": "https://paravsalaniwal.github.io/T3Project/pandas&numpyProject/",
-          "relUrl": "/pandas&numpyProject/",
+          "title": "Data Analysis Project",
+          "content": "Name Age City . John | 35 | New York | . Mary | 25 | Los Angeles | . Bob | 40 | Chicago | . .",
+          "url": "https://paravsalaniwal.github.io/T3Project/DataAnalysisProject/",
+          "relUrl": "/DataAnalysisProject/",
           "date": ""
       }
       
