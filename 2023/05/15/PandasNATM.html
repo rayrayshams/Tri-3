@@ -357,7 +357,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_sig</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">str_filename</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">csv_header</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_sig</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">str_filename</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="n">csv_header</span><span class="p">)</span>
 <span class="n">df_sig</span>
 </pre></div>
 
@@ -401,6 +401,51 @@ window.onload = wrap_img;
   <tbody>
     <tr>
       <th>0</th>
+      <td>Team</td>
+      <td>2019_Season</td>
+      <td>2020_Season</td>
+      <td>2021_Season</td>
+      <td>2022_Season</td>
+      <td>2023_Season</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Atlanta Hawks</td>
+      <td>29</td>
+      <td>25</td>
+      <td>47</td>
+      <td>43</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Boston Celtics</td>
+      <td>49</td>
+      <td>55</td>
+      <td>41</td>
+      <td>51</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Brooklyn Nets</td>
+      <td>42</td>
+      <td>40</td>
+      <td>55</td>
+      <td>44</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Charlotte Hornets</td>
+      <td>39</td>
+      <td>29</td>
+      <td>38</td>
+      <td>43</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>5</th>
       <td>Chicago Bulls</td>
       <td>22</td>
       <td>28</td>
@@ -409,7 +454,7 @@ window.onload = wrap_img;
       <td>40</td>
     </tr>
     <tr>
-      <th>1</th>
+      <th>6</th>
       <td>Cleveland Cavaliers</td>
       <td>19</td>
       <td>24</td>
@@ -418,7 +463,7 @@ window.onload = wrap_img;
       <td>51</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>7</th>
       <td>Dallas Mavericks</td>
       <td>33</td>
       <td>47</td>
@@ -427,7 +472,7 @@ window.onload = wrap_img;
       <td>38</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>8</th>
       <td>Denver Nuggets</td>
       <td>54</td>
       <td>52</td>
@@ -436,7 +481,7 @@ window.onload = wrap_img;
       <td>53</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>9</th>
       <td>Detroit Pistons</td>
       <td>41</td>
       <td>25</td>
@@ -445,7 +490,7 @@ window.onload = wrap_img;
       <td>17</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>10</th>
       <td>Golden State Warriors</td>
       <td>57</td>
       <td>20</td>
@@ -454,7 +499,7 @@ window.onload = wrap_img;
       <td>44</td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>11</th>
       <td>Houston Rockets</td>
       <td>53</td>
       <td>50</td>
@@ -463,7 +508,7 @@ window.onload = wrap_img;
       <td>22</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>12</th>
       <td>Indiana Pacers</td>
       <td>48</td>
       <td>51</td>
@@ -472,7 +517,7 @@ window.onload = wrap_img;
       <td>35</td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>13</th>
       <td>Los Angeles Clippers</td>
       <td>48</td>
       <td>56</td>
@@ -481,7 +526,7 @@ window.onload = wrap_img;
       <td>44</td>
     </tr>
     <tr>
-      <th>9</th>
+      <th>14</th>
       <td>Los Angeles Lakers</td>
       <td>37</td>
       <td>60</td>
@@ -490,7 +535,7 @@ window.onload = wrap_img;
       <td>43</td>
     </tr>
     <tr>
-      <th>10</th>
+      <th>15</th>
       <td>Memphis Grizzlies</td>
       <td>33</td>
       <td>38</td>
@@ -499,7 +544,7 @@ window.onload = wrap_img;
       <td>51</td>
     </tr>
     <tr>
-      <th>11</th>
+      <th>16</th>
       <td>Miami Heat</td>
       <td>39</td>
       <td>49</td>
@@ -508,7 +553,7 @@ window.onload = wrap_img;
       <td>44</td>
     </tr>
     <tr>
-      <th>12</th>
+      <th>17</th>
       <td>Milwaukee Bucks</td>
       <td>60</td>
       <td>63</td>
@@ -517,7 +562,7 @@ window.onload = wrap_img;
       <td>58</td>
     </tr>
     <tr>
-      <th>13</th>
+      <th>18</th>
       <td>Minnesota Timberwolves</td>
       <td>36</td>
       <td>24</td>
@@ -526,7 +571,7 @@ window.onload = wrap_img;
       <td>42</td>
     </tr>
     <tr>
-      <th>14</th>
+      <th>19</th>
       <td>New Orleans Pelicans</td>
       <td>33</td>
       <td>34</td>
@@ -535,7 +580,7 @@ window.onload = wrap_img;
       <td>42</td>
     </tr>
     <tr>
-      <th>15</th>
+      <th>20</th>
       <td>New York Knicks</td>
       <td>17</td>
       <td>26</td>
@@ -544,7 +589,7 @@ window.onload = wrap_img;
       <td>47</td>
     </tr>
     <tr>
-      <th>16</th>
+      <th>21</th>
       <td>Oklahoma City Thunder</td>
       <td>49</td>
       <td>50</td>
@@ -553,7 +598,7 @@ window.onload = wrap_img;
       <td>40</td>
     </tr>
     <tr>
-      <th>17</th>
+      <th>22</th>
       <td>Orlando Magic</td>
       <td>42</td>
       <td>37</td>
@@ -562,7 +607,7 @@ window.onload = wrap_img;
       <td>34</td>
     </tr>
     <tr>
-      <th>18</th>
+      <th>23</th>
       <td>Philadelphia 76ers</td>
       <td>51</td>
       <td>48</td>
@@ -571,7 +616,7 @@ window.onload = wrap_img;
       <td>54</td>
     </tr>
     <tr>
-      <th>19</th>
+      <th>24</th>
       <td>Phoenix Suns</td>
       <td>19</td>
       <td>38</td>
@@ -580,7 +625,7 @@ window.onload = wrap_img;
       <td>45</td>
     </tr>
     <tr>
-      <th>20</th>
+      <th>25</th>
       <td>Portland Trail Blazers</td>
       <td>53</td>
       <td>39</td>
@@ -589,7 +634,7 @@ window.onload = wrap_img;
       <td>33</td>
     </tr>
     <tr>
-      <th>21</th>
+      <th>26</th>
       <td>Sacramento Kings</td>
       <td>39</td>
       <td>35</td>
@@ -598,7 +643,7 @@ window.onload = wrap_img;
       <td>48</td>
     </tr>
     <tr>
-      <th>22</th>
+      <th>27</th>
       <td>San Antonio Spurs</td>
       <td>48</td>
       <td>37</td>
@@ -607,7 +652,7 @@ window.onload = wrap_img;
       <td>22</td>
     </tr>
     <tr>
-      <th>23</th>
+      <th>28</th>
       <td>Toronto Raptors</td>
       <td>58</td>
       <td>60</td>
@@ -616,7 +661,7 @@ window.onload = wrap_img;
       <td>41</td>
     </tr>
     <tr>
-      <th>24</th>
+      <th>29</th>
       <td>Utah Jazz</td>
       <td>50</td>
       <td>50</td>
@@ -625,7 +670,7 @@ window.onload = wrap_img;
       <td>37</td>
     </tr>
     <tr>
-      <th>25</th>
+      <th>30</th>
       <td>Washington Wizards</td>
       <td>32</td>
       <td>29</td>
