@@ -482,8 +482,8 @@ pre code { font-size: 15px !important; }
 
 p code { font-size: 19px; }
 
-.site-header { background-color: #ffde85; }
+.site-header { background-color: rgba(255, 231, 166, 0.89); }
 
-main.page-content { background-color: #ffe394; }
+main.page-content { background-color: rgba(253, 228, 158, 0.895); }
 
 /*# sourceMappingURL=style.css.map */
