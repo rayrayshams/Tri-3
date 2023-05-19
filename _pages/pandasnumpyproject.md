@@ -67,7 +67,7 @@ permalink: /DataAnalysisProject/
       <td>07</td>
     </tr>
     <tr>
-      <td>Houton Rockets</td>
+      <td>Houston Rockets</td>
       <td>1967</td>
       <td>02</td>
     </tr>
