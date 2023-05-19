@@ -43,11 +43,12 @@ permalink: /Project/
             display: none;
             position: absolute;
             background-color: #f9f9f9;
-            width: 850px;
+            width: 600px;
             z-index: 1;
             box-shadow: 0px 10px 20px rgba(0,0,0,0.8);
             border-radius: 8px;
             padding: 12px;
+            font-size: 15px;
             column-count: 3;
             column-gap: 0.5px;
             text-align: center;
@@ -72,9 +73,10 @@ permalink: /Project/
         }
         .dropdown-content1 {
             display: none;
+            font-size: 15px;
             position: absolute;
             background-color: #f9f9f9;
-            width: 320px;
+            width: 200px;
             z-index: 1;
             box-shadow: 0px 10px 20px rgba(0,0,0,0.8);
             border-radius: 8px;
