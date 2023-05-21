@@ -10,11 +10,10 @@ permalink: /Project/
         .dropdown1 {
             position: relative;
             display: inline-block;
-            margin-right: 300px;
-            margin-bottom: 150px;
+            margin-right: 30px;
             border: 1px solid black;
             background-color: #5499C7;
-            width: 300px;
+            width: 250px;
             box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
             border-radius: 15px;
             padding: 15px;
@@ -26,11 +25,10 @@ permalink: /Project/
         .dropdown {
             position: relative;
             display: inline-block;
-            margin-right: 300px;
-            margin-bottom: 150px;
+            margin-right: 30px;
             border: 1px solid black;
             background-color: #5499C7;
-            width: 300px;
+            width: 250px;
             box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
             border-radius: 15px;
             padding: 15px;
@@ -166,4 +164,7 @@ permalink: /Project/
         </div>
     </div>
 </body>
+<script defer src="https://pyscript.net/alpha/pyscript.js">
+    <py-script> print("wow") </py-script>
+</script>
 </html>
