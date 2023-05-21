@@ -482,6 +482,8 @@ pre code { font-size: 15px !important; }
 
 p code { font-size: 19px; }
 
+.site-title, .site-title:visited { color: #000000; }
+
 .site-header { background-color: #17408b; }
 
 main.page-content { background-color: white; }
