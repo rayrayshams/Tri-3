@@ -12,30 +12,30 @@ permalink: /Project/
             display: inline-block;
             margin-right: 30px;
             border: 1px solid black;
-            background-color: #5499C7;
-            width: 250px;
+            background-color: #C9082A;
+            width: 300px;
             box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
             border-radius: 15px;
             padding: 15px;
             text-align: center;
             font-size: 22px;
             cursor: pointer;
-            background: linear-gradient(to top right, #007bff, #33D3FA);
+            background: linear-gradient(to top right, #C1082A, #D3082A);
         }
         .dropdown {
             position: relative;
             display: inline-block;
             margin-right: 30px;
             border: 1px solid black;
-            background-color: #5499C7;
-            width: 250px;
+            background-color: #C9082A;
+            width: 300px;
             box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
             border-radius: 15px;
             padding: 15px;
             text-align: center;
             font-size: 22px;
             cursor: pointer;
-            background: linear-gradient(to top right, #007bff, #33D3FA);
+            background: linear-gradient(to top right, #C1082A, #D3082A);
         }
         .dropdown-content {
             display: none;
