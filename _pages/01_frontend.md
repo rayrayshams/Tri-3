@@ -13,14 +13,14 @@ permalink: /Project/
             margin-right: 30px;
             border: 1px solid black;
             background-color: #C9082A;
-            width: 300px;
+            width: 250px;
             box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
             border-radius: 15px;
             padding: 15px;
             text-align: center;
             font-size: 22px;
             cursor: pointer;
-            background: linear-gradient(to top right, #C1082A, #D3082A);
+            background: linear-gradient(to top right, #DD0303, #FB7373);
         }
         .dropdown {
             position: relative;
@@ -28,14 +28,14 @@ permalink: /Project/
             margin-right: 30px;
             border: 1px solid black;
             background-color: #C9082A;
-            width: 300px;
+            width: 250px;
             box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
             border-radius: 15px;
             padding: 15px;
             text-align: center;
             font-size: 22px;
             cursor: pointer;
-            background: linear-gradient(to top right, #C1082A, #D3082A);
+            background: linear-gradient(to top right, #DD0303, #FB7373);
         }
         .dropdown-content {
             display: none;
