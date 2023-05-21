@@ -21,7 +21,7 @@ permalink: /Project/
             text-align: center;
             font-size: 22px;
             cursor: pointer;
-            background: linear-gradient(to top right, #007bff, #33D3FA);
+            background: linear-gradient(to top right, #C1082A, #D3082A);
         }
         .dropdown {
             position: relative;
@@ -37,7 +37,7 @@ permalink: /Project/
             text-align: center;
             font-size: 22px;
             cursor: pointer;
-            background: linear-gradient(to top right, #007bff, #33D3FA);
+            background: linear-gradient(to top right, #C1082A, #D3082A);
         }
         .dropdown-content {
             display: none;
