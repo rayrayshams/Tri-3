@@ -117,7 +117,7 @@ permalink: /Project/
             <div class="dropdown-item" id="team8">Denver Nuggets</div>
             <div class="dropdown-item" id="team9">Detroit Pistons</div>
             <div class="dropdown-item" id="team10">Golden State Warriors</div>
-            <div class="dropdown-item" id="team11">Houton Rockets</div>
+            <div class="dropdown-item" id="team11">Houston Rockets</div>
             <div class="dropdown-item" id="team12">Indiana Pacers</div>
             <div class="dropdown-item" id="team13">Los Angeles Clippers</div>
             <div class="dropdown-item" id="team14">Los Angeles Lakers</div>
