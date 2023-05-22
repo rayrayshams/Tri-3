@@ -191,6 +191,14 @@
   
 
   
+      ,"page8": {
+          "title": "Testing JS W Pandas",
+          "content": "",
+          "url": "https://paravsalaniwal.github.io/T3Project/Tester/",
+          "relUrl": "/Tester/",
+          "date": ""
+      }
+      
   
 
   
@@ -203,7 +211,10 @@
   
 
   
-      ,"page12": {
+  
+
+  
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://paravsalaniwal.github.io/T3Project/robots.txt",
