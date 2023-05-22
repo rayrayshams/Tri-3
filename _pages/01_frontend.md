@@ -74,7 +74,7 @@ permalink: /Project/
             font-size: 15px;
             position: absolute;
             background-color: #f9f9f9;
-            width: 220px;
+            width: 230px;
             z-index: 1;
             box-shadow: 0px 10px 20px rgba(0,0,0,0.8);
             border-radius: 8px;
