@@ -164,7 +164,4 @@ permalink: /Project/
         </div>
     </div>
 </body>
-<script defer src="https://pyscript.net/alpha/pyscript.js">
-    <py-script> print("wow") </py-script>
-</script>
 </html>
