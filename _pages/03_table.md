@@ -4,8 +4,6 @@ title: TRIAL
 permalink: /eating/
 ---
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
