@@ -190,9 +190,20 @@
   
 
   
+      ,"page2": {
+          "title": "TRIAL",
+          "content": "&lt;!DOCTYPE html&gt; . CSV to HTML Table . CSV to HTML Table . .",
+          "url": "https://paravsalaniwal.github.io/T3Project/eating/",
+          "relUrl": "/eating/",
+          "date": ""
+      }
+      
+  
 
   
-      ,"page3": {
+
+  
+      ,"page4": {
           "title": "About",
           "content": "This site is built with fastpages .",
           "url": "https://paravsalaniwal.github.io/T3Project/about/",
@@ -205,7 +216,7 @@
   
 
   
-      ,"page5": {
+      ,"page6": {
           "title": "Test Frontend",
           "content": "NBA Team Stats . NBA Team Stats . Select a team: -- Select Team -- Los Angeles Lakers Golden State Warriors Boston Celtics .",
           "url": "https://paravsalaniwal.github.io/T3Project/TEST/",
@@ -236,7 +247,7 @@
   
 
   
-      ,"page13": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://paravsalaniwal.github.io/T3Project/robots.txt",

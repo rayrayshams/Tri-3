@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Search | PetitePandas</title>
+<title>TRIAL | PetitePandas</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Search" />
+<meta property="og:title" content="TRIAL" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Franchise" />
 <meta property="og:description" content="Franchise" />
-<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/search/" />
-<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/search/" />
+<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/eating/" />
+<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/eating/" />
 <meta property="og:site_name" content="PetitePandas" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Search" />
+<meta property="twitter:title" content="TRIAL" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Franchise","headline":"Search","url":"https://paravsalaniwal.github.io/T3Project/search/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Franchise","headline":"TRIAL","url":"https://paravsalaniwal.github.io/T3Project/eating/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/T3Project/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://paravsalaniwal.github.io/T3Project/feed.xml" title="PetitePandas" /><link rel="shortcut icon" type="image/x-icon" href="/T3Project/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -69,17 +69,103 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- adapted from https://github.com/pmarsceill/just-the-docs -->
-<script type="text/javascript" src="/T3Project/assets/js/search.js"></script>
-<script type="text/javascript" src="/T3Project/assets/js/vendor/lunr.min.js"></script>
+        <article class="post">
 
-<div class="search">
-    <div class="search-input-wrap">
-    <input type="text" class="js-search-input search-input input-block form-control" tabindex="0" placeholder="Search PetitePandas" aria-label="Search PetitePandas" autocomplete="off">
-    </div>
-    <br>
-    <div class="js-search-results search-results-wrap"></div>
-</div>
+  <header class="post-header">
+    <h1 class="post-title">TRIAL</h1>
+  </header>
+
+  <div class="post-content">
+    <p>&lt;!DOCTYPE html&gt;</p>
+<html>
+<head>
+  <title>CSV to HTML Table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSV to HTML Table</h1>
+
+  <table id="csvTable">
+    <!-- Table content will be dynamically generated here -->
+  </table>
+
+  <script>
+    // Function to convert CSV to HTML table
+    function csvToTable(csv) {
+      var lines = csv.split("\n");
+      var tableHTML = "<thead><tr>";
+      var headers = lines[0].split(",");
+
+      // Generate table headers
+      for (var i = 0; i < headers.length; i++) {
+        tableHTML += "<th>" + headers[i] + "</th>";
+      }
+      tableHTML += "</tr></thead><tbody>";
+
+      // Generate table rows
+      for (var j = 1; j < lines.length; j++) {
+        var cells = lines[j].split(",");
+        tableHTML += "<tr>";
+        for (var k = 0; k < cells.length; k++) {
+          tableHTML += "<td>" + cells[k] + "</td>";
+        }
+        tableHTML += "</tr>";
+      }
+      tableHTML += "</tbody>";
+
+      return tableHTML;
+    }
+
+    // Read the CSV file and generate the HTML table
+    function readCSV(file) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        var csv = e.target.result;
+        var htmlTable = csvToTable(csv);
+        document.getElementById("csvTable").innerHTML = htmlTable;
+      };
+      reader.readAsText(file);
+    }
+
+    // Handle file input change event
+    function handleFileSelect(event) {
+      var file = event.target.files[0];
+      readCSV(file);
+    }
+
+    // Attach event listener to the file input element
+    document.getElementById("csvFile").addEventListener("change", handleFileSelect, false);
+  </script>
+
+  <input type="file" id="csvFile" accept=".csv" />
+
+  <script>
+    // Automatically load "wizards.csv" file on page load
+    window.onload = function() {
+      var file = new File([""], "T3Project/_notebooks/files/wizards.csv");
+      readCSV(file);
+    };
+  </script>
+
+</body>
+</html>
+
+  </div>
+
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
