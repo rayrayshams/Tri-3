@@ -1,5 +1,8 @@
-
-
+---
+layout: page
+title: TRIAL
+permalink: /eating/
+---
 
 
 
