@@ -76,37 +76,95 @@ window.onload = wrap_img;
   </header>
 
   <div class="post-content">
-    <html>
-<head>
-    <title>NBA Team Stats</title>
-</head>
-<body>
-    <h1>NBA Team Stats</h1>
-    <label for="team-select">Select a team:</label>
-    <select id="team-select">
-        <option value="">-- Select Team --</option>
-        <option value="lakers">Los Angeles Lakers</option>
-        <option value="warriors">Golden State Warriors</option>
-        <option value="celtics">Boston Celtics</option>
-        <!-- Add more options for other teams -->
-    </select>
+    <!-- CSS -->
+<style type="text/css">
+    table th, table td{
+    padding: 5px;
+}
+</style>
+
+<div>
+    <div>
+         <input type="file" name="file" id="file" accept=".csv" /> <br /><br />
+         <input type="button" id="btnsubmit" value="Submit" onclick="readCSVFile();" />
+    </div>
     <br /><br />
-    <iframe id="player-stats" width="100%" height="500px"></iframe>
-    <script>
-        var teamSelect = document.getElementById("team-select");
-        var playerStats = document.getElementById("player-stats");
-        teamSelect.addEventListener("change", function() {
-            var team = this.value;
-            if (team !== "") {
-                var csvFile = team + ".csv"; // Assuming the CSV files are named after the teams (e.g., Lakers.csv)
-                playerStats.setAttribute("src", csvFile);
-            } else {
-                playerStats.removeAttribute("src");
-            }
-        });
-    </script>
-</body>
-</html>
+    <!-- List CSV file data -->
+    <table id="tblcsvdata" border="1" style="border-collapse: collapse;">
+         <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Games Played</th>
+                  <th>Points</th>
+                  <th>Assists</th>
+                  <th>Rebounds</th>
+                  <th>Steals</th>
+                  <th>Blocks</th>
+                  <th>Field Goal %</th>
+                  <th>3 Point %</th>
+              </tr>
+         </thead>
+         <tbody>
+         </tbody>
+    </table>
+</div>
+
+<script>
+    function readCSVFile(){
+     var files = document.querySelector('#file').files;
+
+     if(files.length > 0 ){
+
+          // Selected file
+          var file = files[0];
+
+          // FileReader Object
+          var reader = new FileReader();
+
+          // Read file as string 
+          reader.readAsText(file);
+
+          // Load event
+          reader.onload = function(event) {
+
+               // Read file data
+               var csvdata = event.target.result;
+
+               // Split by line break to gets rows Array
+               var rowData = csvdata.split('\n');
+
+               // <table > <tbody>
+               var tbodyEl = document.getElementById('tblcsvdata').getElementsByTagName('tbody')[0];
+               tbodyEl.innerHTML = "";
+
+               // Loop on the row Array (change row=0 if you also want to read 1st row)
+               for (var row = 1; row < rowData.length; row++) {
+
+                     // Insert a row at the end of table
+                     var newRow = tbodyEl.insertRow();
+
+                     // Split by comma (,) to get column Array
+                     rowColData = rowData[row].split(',');
+
+                     // Loop on the row column Array
+                     for (var col = 0; col < rowColData.length; col++) {
+
+                          // Insert a cell at the end of the row
+                          var newCell = newRow.insertCell();
+                          newCell.innerHTML = rowColData[col];
+
+                     }
+
+               }
+          };
+
+     }else{
+          alert("Please select a file.");
+     }
+
+}
+</script>
+
 
   </div>
 
