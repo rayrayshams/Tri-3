@@ -190,33 +190,9 @@
   
 
   
-      ,"page2": {
-          "title": "TRIAL",
-          "content": "&lt;!DOCTYPE html&gt; . CSV to HTML Table . CSV to HTML Table . .",
-          "url": "https://paravsalaniwal.github.io/T3Project/eating/",
-          "relUrl": "/eating/",
-          "date": ""
-      }
-      
-  
 
   
-
-  
-      ,"page4": {
-          "title": "About",
-          "content": "This site is built with fastpages .",
-          "url": "https://paravsalaniwal.github.io/T3Project/about/",
-          "relUrl": "/about/",
-          "date": ""
-      }
-      
-  
-
-  
-
-  
-      ,"page6": {
+      ,"page3": {
           "title": "Test Frontend",
           "content": "Name Games Played Points Assists Rebounds Steals Blocks Field Goal % 3 Point % .",
           "url": "https://paravsalaniwal.github.io/T3Project/TEST/",
@@ -247,7 +223,7 @@
   
 
   
-      ,"page14": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://paravsalaniwal.github.io/T3Project/robots.txt",
