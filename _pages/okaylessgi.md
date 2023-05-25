@@ -16,11 +16,11 @@ permalink: /okay/
 <body>
     <div id="plot_div"></div>
     <script>
-         dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
+         dfd.read_csv("https://raw.githubusercontent.com/paravsalaniwal/T3Project/master/_notebooks/files/warriors.csv")
 
             .then(df => {
                 var layout = {
-                    title: 'A financial charts',
+                    title: 'WARRIORS CHART',
                     xaxis: {title: 'Date'},
                     yaxis: {title: 'Count'}
                 }
