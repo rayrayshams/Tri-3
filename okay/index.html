@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>PetitePandas | Franchise</title>
+<title>PLEASE WORK! | PetitePandas</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="PetitePandas" />
+<meta property="og:title" content="PLEASE WORK!" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Franchise" />
 <meta property="og:description" content="Franchise" />
-<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/404.html" />
-<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/404.html" />
+<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/okay/" />
+<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/okay/" />
 <meta property="og:site_name" content="PetitePandas" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="PetitePandas" />
+<meta property="twitter:title" content="PLEASE WORK!" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Franchise","headline":"PetitePandas","url":"https://paravsalaniwal.github.io/T3Project/404.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Franchise","headline":"PLEASE WORK!","url":"https://paravsalaniwal.github.io/T3Project/okay/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/T3Project/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://paravsalaniwal.github.io/T3Project/feed.xml" title="PetitePandas" /><link rel="shortcut icon" type="image/x-icon" href="/T3Project/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -69,25 +69,44 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <article class="post">
 
-<div class="container">
-  <h1>404</h1>
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  <header class="post-header">
+    <h1 class="post-title">PLEASE WORK!</h1>
+  </header>
+
+  <div class="post-content">
+    <html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.1/dist/index.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="plot_div"></div>
+    <script>
+         dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
+
+            .then(df => {
+                var layout = {
+                    title: 'A financial charts',
+                    xaxis: {title: 'Date'},
+                    yaxis: {title: 'Count'}
+                }
+    new_df = df.set_index({ key: "Date" })
+   new_df.plot("plot_div").line({ columns: ["AAPL.Open", "AAPL.High"], layout: layout 
+})
+            }).catch(err => {
+                console.log(err);
+            })
+    </script>
+</body>
+</html>
+
+  </div>
+
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
