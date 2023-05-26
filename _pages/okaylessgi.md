@@ -54,8 +54,9 @@ permalink: /okay/
                         borderWidth: 1
                     }]
                 };
-                df.plot("plot_div").line({ columns: ["Points"], layout: layout });
-                df.plot("bar_plot").bar({ columns: ["Points"], layout: barLayout });
+                var new_df = df.set_index({ key: df.columns[0] });
+                new_df.plot("plot_div").line({ columns: ["Points"], layout: layout });
+                new_df.plot("bar_plot").bar({ columns: ["Points"], layout: barLayout });
                 new Chart(document.getElementById('pie_plot'), {
                     type: 'pie',
                     data: pieData,
