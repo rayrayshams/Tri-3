@@ -17,19 +17,17 @@ permalink: /okay/
     <div id="plot_div"></div>
     <script>
          dfd.read_csv("https://raw.githubusercontent.com/paravsalaniwal/T3Project/master/_notebooks/files/warriors.csv")
-
             .then(df => {
                 var layout = {
                     title: 'WARRIORS CHART',
                     xaxis: {title: 'Date'},
                     yaxis: {title: 'Count'}
-                }
-    new_df = df.set_index({ key: "Date" })
-   new_df.plot("plot_div").line({ columns: ["AAPL.Open", "AAPL.High"], layout: layout 
-})
+                };
+                var new_df = df.set_index({ key: "Date" });
+                new_df.plot("plot_div").line({ columns: ["AAPL.Open", "AAPL.High"], layout: layout});
             }).catch(err => {
                 console.log(err);
-            })
+            });
     </script>
 </body>
 </html>
