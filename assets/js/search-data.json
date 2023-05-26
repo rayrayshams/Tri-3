@@ -195,6 +195,17 @@
 
   
       ,"page5": {
+          "title": "JavaScript Final",
+          "content": ". Matching Game Using JS .",
+          "url": "https://paravsalaniwal.github.io/T3Project/JS/",
+          "relUrl": "/JS/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page6": {
           "title": "PLEASE WORK!",
           "content": "Document . .",
           "url": "https://paravsalaniwal.github.io/T3Project/okay/",
@@ -223,7 +234,7 @@
   
 
   
-      ,"page12": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://paravsalaniwal.github.io/T3Project/robots.txt",
