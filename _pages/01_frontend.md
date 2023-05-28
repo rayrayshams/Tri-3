@@ -102,6 +102,7 @@ permalink: /Project/
             margin-bottom: 0;
         }
     </style>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <div class="dropdown">
@@ -140,18 +141,6 @@ permalink: /Project/
         </div>
     </div>
     <div class="dropdown1">
-        <span>Pick a Stat - Pie Graph</span>
-        <div class="dropdown-content1">
-            <div class="dropdown-item1" id="pie1">Points</div>
-            <div class="dropdown-item1" id="pie2">Assists</div>
-            <div class="dropdown-item1" id="pie3">Rebounds</div>
-            <div class="dropdown-item1" id="pie4">Steals</div>
-            <div class="dropdown-item1" id="pie5">Blocks</div>
-            <div class="dropdown-item1" id="pie6">Field Goal %</div>
-            <div class="dropdown-item1" id="pie7">3 Point %</div>
-        </div>
-    </div>
-    <div class="dropdown1">
         <span>Pick a Stat - Bar Graph</span>
         <div class="dropdown-content1">
             <div class="dropdown-item1" id="bar1">Points</div>
@@ -163,6 +152,19 @@ permalink: /Project/
             <div class="dropdown-item1" id="bar7">3 Point %</div>
         </div>
     </div>
+    <div class="dropdown1">
+        <span>Pick a Stat - Pie Graph</span>
+        <div class="dropdown-content1">
+            <div class="dropdown-item1" id="pie1">Points</div>
+            <div class="dropdown-item1" id="pie2">Assists</div>
+            <div class="dropdown-item1" id="pie3">Rebounds</div>
+            <div class="dropdown-item1" id="pie4">Steals</div>
+            <div class="dropdown-item1" id="pie5">Blocks</div>
+            <div class="dropdown-item1" id="pie6">Field Goal %</div>
+            <div class="dropdown-item1" id="pie7">3 Point %</div>
+        </div>
+    </div>
+    <br>
     <div id="table"></div>
     <br>
     <div id="barGraph"></div>
@@ -170,134 +172,168 @@ permalink: /Project/
     <div id="pieGraph"></div>
 
 <script>
-    let tableData = null;
-    let barGraphData = null;
-    let pieGraphData = null;
-        function displayTable(teamName) {
-            const data = tableData[teamName];
-            console.log('Data Received', data)
-            const tableElement = document.getElementById('table');
-
-            // Create the table
-            const table = document.createElement('table');
-
-            // Create the table header row
-            const headerRow = document.createElement('tr');
-            for (const column of Object.keys(data)) {
-                const headerCell = document.createElement('th');
-                headerCell.textContent = column;
-                headerRow.appendChild(headerCell);
-            }
-            table.appendChild(headerRow);
-
-            // Iterate over the keys of the Player object and retrieve the corresponding data
-            const playerKeys = Object.keys(data.Player);
-            for (const key of playerKeys) {
-                const bodyRow = document.createElement('tr');
-                for (const column of Object.keys(data)) {
-                const bodyCell = document.createElement('td');
-                bodyCell.textContent = data[column][key];
-                bodyRow.appendChild(bodyCell);
-                }
-                table.appendChild(bodyRow);
-            }
-
-            // Clear the table element and append the new table
-            tableElement.innerHTML = '';
-            tableElement.appendChild(table);
-        };
-
-        function displayBarGraph(aspect) {
-            const data = barGraphData;
-            let trace = {
-            x: Object.values(data.Player),
-            y: Object.values(data.aspect),
-            type: 'bar'
-            };
-
-            let layout = {
-                title: 'Player Points',
-                xaxis: { title: 'Player' },
-                yaxis: { title: aspect }
-            };
-
-            let graphData = [trace];
-
-            Plotly.newPlot('barGraph', graphData, layout);
-        };
-
-        function displayPieGraph(aspect) {
-            const data = pieGraphData;
-            let trace = {
-                labels: Object.values(data.Player),
-                values: Object.values(data.aspect),
-                type: 'pie'
-            };
-
-            let layout = {
-                title: aspect + 'Distribution by Players'
-            };
-
-            let graphData = [trace];
-
-            Plotly.newPlot('pieGraph', graphData, layout);
-        };
-        fetch('http://127.0.0.1:8086/api/graphs/')
+        
+    fetch('http://127.0.0.1:8086/api/graphs/')
       .then(response => response.json())
       .then(data => {
-            console.log('Data after fetch', data);
-            displayTable(data); // Call the displayTable function with the received data
+            var tableData = data;
+            var barGraphData = null;
+            var pieGraphData = null;
             // Add event listeners for each team
-            document.getElementById('team1').addEventListener('click', () => displayTable(data['hawks']));
-            document.getElementById('team2').addEventListener('click', () => displayTable(data['celtics']));
-            document.getElementById('team3').addEventListener('click', () => displayTable(data['nets']));
-            document.getElementById('team4').addEventListener('click', () => displayTable(data['hornets']));
-            document.getElementById('team5').addEventListener('click', () => displayTable(data['bulls']));
-            document.getElementById('team6').addEventListener('click', () => displayTable(data['cavaliers']));
-            document.getElementById('team7').addEventListener('click', () => displayTable(data['mavericks']));
-            document.getElementById('team8').addEventListener('click', () => displayTable(data['nuggets']));
-            document.getElementById('team9').addEventListener('click', () => displayTable(data['pistons']));
-            document.getElementById('team10').addEventListener('click', () => displayTable(data['warriors']));
-            document.getElementById('team11').addEventListener('click', () => displayTable(data['rockets']));
-            document.getElementById('team12').addEventListener('click', () => displayTable(data['pacers']));
-            document.getElementById('team13').addEventListener('click', () => displayTable(data['clippers']));
-            document.getElementById('team14').addEventListener('click', () => displayTable(data['lakers']));
-            document.getElementById('team15').addEventListener('click', () => displayTable(data['grizzlies']));
-            document.getElementById('team16').addEventListener('click', () => displayTable(data['heat']));
-            document.getElementById('team17').addEventListener('click', () => displayTable(data['bucks']));
-            document.getElementById('team18').addEventListener('click', () => displayTable(data['timberwolves']));
-            document.getElementById('team19').addEventListener('click', () => displayTable(data['pelicans']));
-            document.getElementById('team20').addEventListener('click', () => displayTable(data['knicks']));
-            document.getElementById('team21').addEventListener('click', () => displayTable(data['thunder']));
-            document.getElementById('team22').addEventListener('click', () => displayTable(data['magic']));
-            document.getElementById('team23').addEventListener('click', () => displayTable(data['76ers']));
-            document.getElementById('team24').addEventListener('click', () => displayTable(data['suns']));
-            document.getElementById('team25').addEventListener('click', () => displayTable(data['blazers']));
-            document.getElementById('team26').addEventListener('click', () => displayTable(data['kings']));
-            document.getElementById('team27').addEventListener('click', () => displayTable(data['spurs']));
-            document.getElementById('team28').addEventListener('click', () => displayTable(data['raptors']));
-            document.getElementById('team29').addEventListener('click', () => displayTable(data['jazz']));
-            document.getElementById('team30').addEventListener('click', () => displayTable(data['wizards']));
+            document.getElementById('team1').addEventListener('click', () => displayTable('hawks'));
+            document.getElementById('team2').addEventListener('click', () => displayTable('celtics'));
+            document.getElementById('team3').addEventListener('click', () => displayTable('nets'));
+            document.getElementById('team4').addEventListener('click', () => displayTable('hornets'));
+            document.getElementById('team5').addEventListener('click', () => displayTable('bulls'));
+            document.getElementById('team6').addEventListener('click', () => displayTable('cavaliers'));
+            document.getElementById('team7').addEventListener('click', () => displayTable('mavericks'));
+            document.getElementById('team8').addEventListener('click', () => displayTable('nuggets'));
+            document.getElementById('team9').addEventListener('click', () => displayTable('pistons'));
+            document.getElementById('team10').addEventListener('click', () => displayTable('warriors'));
+            document.getElementById('team11').addEventListener('click', () => displayTable('rockets'));
+            document.getElementById('team12').addEventListener('click', () => displayTable('pacers'));
+            document.getElementById('team13').addEventListener('click', () => displayTable('clippers'));
+            document.getElementById('team14').addEventListener('click', () => displayTable('lakers'));
+            document.getElementById('team15').addEventListener('click', () => displayTable('grizzlies'));
+            document.getElementById('team16').addEventListener('click', () => displayTable('heat'));
+            document.getElementById('team17').addEventListener('click', () => displayTable('bucks'));
+            document.getElementById('team18').addEventListener('click', () => displayTable('timberwolves'));
+            document.getElementById('team19').addEventListener('click', () => displayTable('pelicans'));
+            document.getElementById('team20').addEventListener('click', () => displayTable('knicks'));
+            document.getElementById('team21').addEventListener('click', () => displayTable('thunder'));
+            document.getElementById('team22').addEventListener('click', () => displayTable('magic'));
+            document.getElementById('team23').addEventListener('click', () => displayTable('76ers'));
+            document.getElementById('team24').addEventListener('click', () => displayTable('suns'));
+            document.getElementById('team25').addEventListener('click', () => displayTable('blazers'));
+            document.getElementById('team26').addEventListener('click', () => displayTable('kings'));
+            document.getElementById('team27').addEventListener('click', () => displayTable('spurs'));
+            document.getElementById('team28').addEventListener('click', () => displayTable('raptors'));
+            document.getElementById('team29').addEventListener('click', () => displayTable('jazz'));
+            document.getElementById('team30').addEventListener('click', () => displayTable('wizards'));
 
-            document.getElementById('bar1').addEventListener('click', () => displayBarGraph(data, 'Points'));
-            document.getElementById('bar2').addEventListener('click', () => displayBarGraph(data, 'Assists'));
-            document.getElementById('bar3').addEventListener('click', () => displayBarGraph(data, 'Rebounds'));
-            document.getElementById('bar4').addEventListener('click', () => displayBarGraph(data, 'Steals'));
-            document.getElementById('bar5').addEventListener('click', () => displayBarGraph(data, 'Blocks'));
-            document.getElementById('bar6').addEventListener('click', () => displayBarGraph(data, 'FG%'));
-            document.getElementById('bar7').addEventListener('click', () => displayBarGraph(data, '3PT%'));
+            document.getElementById('team1').addEventListener('click', () => selectTeam('hawks'));
+            document.getElementById('team2').addEventListener('click', () => selectTeam('celtics'));
+            document.getElementById('team3').addEventListener('click', () => selectTeam('nets'));
+            document.getElementById('team4').addEventListener('click', () => selectTeam('hornets'));
+            document.getElementById('team5').addEventListener('click', () => selectTeam('bulls'));
+            document.getElementById('team6').addEventListener('click', () => selectTeam('cavaliers'));
+            document.getElementById('team7').addEventListener('click', () => selectTeam('mavericks'));
+            document.getElementById('team8').addEventListener('click', () => selectTeam('nuggets'));
+            document.getElementById('team9').addEventListener('click', () => selectTeam('pistons'));
+            document.getElementById('team10').addEventListener('click', () => selectTeam('warriors'));
+            document.getElementById('team11').addEventListener('click', () => selectTeam('rockets'));
+            document.getElementById('team12').addEventListener('click', () => selectTeam('pacers'));
+            document.getElementById('team13').addEventListener('click', () => selectTeam('clippers'));
+            document.getElementById('team14').addEventListener('click', () => selectTeam('lakers'));
+            document.getElementById('team15').addEventListener('click', () => selectTeam('grizzlies'));
+            document.getElementById('team16').addEventListener('click', () => selectTeam('heat'));
+            document.getElementById('team17').addEventListener('click', () => selectTeam('bucks'));
+            document.getElementById('team18').addEventListener('click', () => selectTeam('timberwolves'));
+            document.getElementById('team19').addEventListener('click', () => selectTeam('pelicans'));
+            document.getElementById('team20').addEventListener('click', () => selectTeam('knicks'));
+            document.getElementById('team21').addEventListener('click', () => selectTeam('thunder'));
+            document.getElementById('team22').addEventListener('click', () => selectTeam('magic'));
+            document.getElementById('team23').addEventListener('click', () => selectTeam('76ers'));
+            document.getElementById('team24').addEventListener('click', () => selectTeam('suns'));
+            document.getElementById('team25').addEventListener('click', () => selectTeam('blazers'));
+            document.getElementById('team26').addEventListener('click', () => selectTeam('kings'));
+            document.getElementById('team27').addEventListener('click', () => selectTeam('spurs'));
+            document.getElementById('team28').addEventListener('click', () => selectTeam('raptors'));
+            document.getElementById('team29').addEventListener('click', () => selectTeam('jazz'));
+            document.getElementById('team30').addEventListener('click', () => selectTeam('wizards'));
+        
+      function selectTeam(teamName) {
+        barGraphData = tableData[teamName];
+        pieGraphData = tableData[teamName];
+      }
+
+      function displayTable(teamName) {
+        var team = teamName;
+        const data = tableData[teamName];
+        const tableElement = document.getElementById('table');
+        const table = document.createElement('table');
+        const headerRow = document.createElement('tr');
+
+        // Create the table header row
+        for (const column of Object.keys(data)) {
+            const headerCell = document.createElement('th');
+            headerCell.textContent = column;
+            headerRow.appendChild(headerCell);
+        }
+        table.appendChild(headerRow);
+
+        // Iterate over the keys of the Player object and retrieve the corresponding data
+        const playerKeys = Object.keys(data['Player']);
+        for (const key of playerKeys) {
+            const bodyRow = document.createElement('tr');
+            for (const column of Object.keys(data)) {
+            const bodyCell = document.createElement('td');
+            bodyCell.textContent = data[column][key];
+            bodyRow.appendChild(bodyCell);
+            }
+            table.appendChild(bodyRow);
+        };
+
+        // Clear the table element and append the new table
+        tableElement.innerHTML = '';
+        tableElement.appendChild(table);
+        };
+    
+    document.getElementById('bar1').addEventListener('click', () => displayBarGraph('Points'));
+    document.getElementById('bar2').addEventListener('click', () => displayBarGraph('Assists'));
+    document.getElementById('bar3').addEventListener('click', () => displayBarGraph('Rebounds'));
+    document.getElementById('bar4').addEventListener('click', () => displayBarGraph('Steals'));
+    document.getElementById('bar5').addEventListener('click', () => displayBarGraph('Blocks'));
+    document.getElementById('bar6').addEventListener('click', () => displayBarGraph('FG%'));
+    document.getElementById('bar7').addEventListener('click', () => displayBarGraph('3PT%'));
             
-            document.getElementById('pie1').addEventListener('click', () => displayPieGraph(data, 'Points'));
-            document.getElementById('pie2').addEventListener('click', () => displayPieGraph(data, 'Assists'));
-            document.getElementById('pie3').addEventListener('click', () => displayPieGraph(data, 'Rebounds'));
-            document.getElementById('pie4').addEventListener('click', () => displayPieGraph(data, 'Steals'));
-            document.getElementById('pie5').addEventListener('click', () => displayPieGraph(data, 'Blocks'));
-            document.getElementById('pie6').addEventListener('click', () => displayPieGraph(data, 'FG%'));
-            document.getElementById('pie7').addEventListener('click', () => displayPieGraph(data, '3PT%'));    
-      })
-      .catch(error => {
-        console.log('Error fetching data:', error);
-      })
+    document.getElementById('pie1').addEventListener('click', () => displayPieGraph('Points'));
+    document.getElementById('pie2').addEventListener('click', () => displayPieGraph('Assists'));
+    document.getElementById('pie3').addEventListener('click', () => displayPieGraph('Rebounds'));
+    document.getElementById('pie4').addEventListener('click', () => displayPieGraph('Steals'));
+    document.getElementById('pie5').addEventListener('click', () => displayPieGraph('Blocks'));
+    document.getElementById('pie6').addEventListener('click', () => displayPieGraph('FG%'));
+    document.getElementById('pie7').addEventListener('click', () => displayPieGraph('3PT%'));  
+
+    function displayBarGraph(aspect) {
+        const data = barGraphData;
+        let trace = {
+            x: Object.values(data.Player),
+            y: Object.values(data[aspect]),
+            type: 'bar'
+        };
+
+        let layout = {
+            title: 'Player ' + aspect,
+            xaxis: { title: 'Player' },
+            yaxis: { title: aspect }
+        };
+
+        let graphData = [trace];
+
+        Plotly.newPlot('barGraph', graphData, layout);
+        };
+
+    function displayPieGraph(aspect) {
+        const data = pieGraphData;
+        let trace = {
+            labels: Object.values(data.Player),
+            values: Object.values(data[aspect]),
+            type: 'pie'
+        };
+
+        let layout = {
+            title: aspect + ' Distribution by Players'
+        };
+
+        let graphData = [trace];
+
+        Plotly.newPlot('pieGraph', graphData, layout);
+        };
+    })
+    .catch(error => {
+        console.log('Error message', error);
+    });
 </script>
 </body>
 </html>
