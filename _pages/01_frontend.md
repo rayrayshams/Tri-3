@@ -107,60 +107,60 @@ permalink: /Project/
     <div class="dropdown">
         <span>Pick a Team</span>
         <div class="dropdown-content">
-            <div class="dropdown-item" id="team1" onclick="displayTable('Hawks')">Atlanta Hawks</div>
-            <div class="dropdown-item" id="team2" onclick="displayTable('Celtics')">Boston Celtics</div>
-            <div class="dropdown-item" id="team3" onclick="displayTable('Nets')">Brooklyn Nets</div>
-            <div class="dropdown-item" id="team4" onclick="displayTable('Hornets')">Charlotte Hornets</div>
-            <div class="dropdown-item" id="team5" onclick="displayTable('Bulls')">Chicago Bulls</div>
-            <div class="dropdown-item" id="team6" onclick="displayTable('Cavaliers')">Cleveland Cavaliers</div>
-            <div class="dropdown-item" id="team7" onclick="displayTable('Mavericks')">Dallas Mavericks</div>
-            <div class="dropdown-item" id="team8" onclick="displayTable('Nuggets')">Denver Nuggets</div>
-            <div class="dropdown-item" id="team9" onclick="displayTable('Pistons')">Detroit Pistons</div>
-            <div class="dropdown-item" id="team10" onclick="displayTable('Warriors')">Golden State Warriors</div>
-            <div class="dropdown-item" id="team11" onclick="displayTable('Rockets')">Houston Rockets</div>
-            <div class="dropdown-item" id="team12" onclick="displayTable('Pacers')">Indiana Pacers</div>
-            <div class="dropdown-item" id="team13" onclick="displayTable('Clippers')">Los Angeles Clippers</div>
-            <div class="dropdown-item" id="team14" onclick="displayTable('Lakers')">Los Angeles Lakers</div>
-            <div class="dropdown-item" id="team15" onclick="displayTable('Grizzlies')">Memphis Grizzlies</div>
-            <div class="dropdown-item" id="team16" onclick="displayTable('Heat')">Miami Heat</div>
-            <div class="dropdown-item" id="team17" onclick="displayTable('Bucks')">Milwaukee Bucks</div>
-            <div class="dropdown-item" id="team18" onclick="displayTable('Timberwolves')">Minnesota Timberwolves</div>
-            <div class="dropdown-item" id="team19" onclick="displayTable('Pelicans')">New Orleans Pelicans</div>
-            <div class="dropdown-item" id="team20" onclick="displayTable('Knicks')">New York Knicks</div>
-            <div class="dropdown-item" id="team21" onclick="displayTable('Thunder')">Oklahoma City Thunder</div>
-            <div class="dropdown-item" id="team22" onclick="displayTable('Magic')">Orlando Magic</div>
-            <div class="dropdown-item" id="team23" onclick="displayTable('76ers')">Philadelphia 76ers</div>
-            <div class="dropdown-item" id="team24" onclick="displayTable('Suns')">Phoenix Suns</div>
-            <div class="dropdown-item" id="team25" onclick="displayTable('Blazers')">Portland Trail Blazers</div>
-            <div class="dropdown-item" id="team26" onclick="displayTable('Kings')">Sacramento Kings</div>
-            <div class="dropdown-item" id="team27" onclick="displayTable('Spurs')">San Antonio Spurs</div>
-            <div class="dropdown-item" id="team28" onclick="displayTable('Raptors')">Toronto Raptors</div>
-            <div class="dropdown-item" id="team29" onclick="displayTable('Jazz')">Utah Jazz</div>
-            <div class="dropdown-item" id="team30" onclick="displayTable('Wizards')">Washington Wizards</div>
+            <div class="dropdown-item" id="team1">Atlanta Hawks</div>
+            <div class="dropdown-item" id="team2">Boston Celtics</div>
+            <div class="dropdown-item" id="team3">Brooklyn Nets</div>
+            <div class="dropdown-item" id="team4">Charlotte Hornets</div>
+            <div class="dropdown-item" id="team5">Chicago Bulls</div>
+            <div class="dropdown-item" id="team6">Cleveland Cavaliers</div>
+            <div class="dropdown-item" id="team7">Dallas Mavericks</div>
+            <div class="dropdown-item" id="team8">Denver Nuggets</div>
+            <div class="dropdown-item" id="team9">Detroit Pistons</div>
+            <div class="dropdown-item" id="team10">Golden State Warriors</div>
+            <div class="dropdown-item" id="team11">Houston Rockets</div>
+            <div class="dropdown-item" id="team12">Indiana Pacers</div>
+            <div class="dropdown-item" id="team13">Los Angeles Clippers</div>
+            <div class="dropdown-item" id="team14">Los Angeles Lakers</div>
+            <div class="dropdown-item" id="team15">Memphis Grizzlies</div>
+            <div class="dropdown-item" id="team16">Miami Heat</div>
+            <div class="dropdown-item" id="team17">Milwaukee Bucks</div>
+            <div class="dropdown-item" id="team18">Minnesota Timberwolves</div>
+            <div class="dropdown-item" id="team19">New Orleans Pelicans</div>
+            <div class="dropdown-item" id="team20">New York Knicks</div>
+            <div class="dropdown-item" id="team21">Oklahoma City Thunder</div>
+            <div class="dropdown-item" id="team22">Orlando Magic</div>
+            <div class="dropdown-item" id="team23">Philadelphia 76ers</div>
+            <div class="dropdown-item" id="team24">Phoenix Suns</div>
+            <div class="dropdown-item" id="team25">Portland Trail Blazers</div>
+            <div class="dropdown-item" id="team26">Sacramento Kings</div>
+            <div class="dropdown-item" id="team27">San Antonio Spurs</div>
+            <div class="dropdown-item" id="team28">Toronto Raptors</div>
+            <div class="dropdown-item" id="team29">Utah Jazz</div>
+            <div class="dropdown-item" id="team30">Washington Wizards</div>
         </div>
     </div>
     <div class="dropdown1">
         <span>Pick a Stat - Pie Graph</span>
         <div class="dropdown-content1">
-            <div class="dropdown-item1" id="pie1" onclick="displayPieGraph('Points')">Points</div>
-            <div class="dropdown-item1" id="pie2" onclick="displayPieGraph('Assists')">Assists</div>
-            <div class="dropdown-item1" id="pie3" onclick="displayPieGraph('Rebounds')">Rebounds</div>
-            <div class="dropdown-item1" id="pie4" onclick="displayPieGraph('Steals')">Steals</div>
-            <div class="dropdown-item1" id="pie5" onclick="displayPieGraph('Blocks')">Blocks</div>
-            <div class="dropdown-item1" id="pie6" onclick="displayPieGraph('FG%')">Field Goal %</div>
-            <div class="dropdown-item1" id="pie7" onclick="displayPieGraph('3PT%')">3 Point %</div>
+            <div class="dropdown-item1" id="pie1">Points</div>
+            <div class="dropdown-item1" id="pie2">Assists</div>
+            <div class="dropdown-item1" id="pie3">Rebounds</div>
+            <div class="dropdown-item1" id="pie4">Steals</div>
+            <div class="dropdown-item1" id="pie5">Blocks</div>
+            <div class="dropdown-item1" id="pie6">Field Goal %</div>
+            <div class="dropdown-item1" id="pie7">3 Point %</div>
         </div>
     </div>
     <div class="dropdown1">
         <span>Pick a Stat - Bar Graph</span>
         <div class="dropdown-content1">
-            <div class="dropdown-item1" id="bar1" onclick="displayBarGraph('Points')">Points</div>
-            <div class="dropdown-item1" id="bar2" onclick="displayBarGraph('Assists')">Assists</div>
-            <div class="dropdown-item1" id="bar3" onclick="displayBarGraph('Rebounds')">Rebounds</div>
-            <div class="dropdown-item1" id="bar4" onclick="displayBarGraph('Steals')">Steals</div>
-            <div class="dropdown-item1" id="bar5" onclick="displayBarGraph('Blocks')">Blocks</div>
-            <div class="dropdown-item1" id="bar6" onclick="displayBarGraph('FG%')">Field Goal %</div>
-            <div class="dropdown-item1" id="bar7" onclick="displayBarGraph('3PT%')">3 Point %</div>
+            <div class="dropdown-item1" id="bar1">Points</div>
+            <div class="dropdown-item1" id="bar2">Assists</div>
+            <div class="dropdown-item1" id="bar3">Rebounds</div>
+            <div class="dropdown-item1" id="bar4">Steals</div>
+            <div class="dropdown-item1" id="bar5">Blocks</div>
+            <div class="dropdown-item1" id="bar6">Field Goal %</div>
+            <div class="dropdown-item1" id="bar7">3 Point %</div>
         </div>
     </div>
     <div id="table"></div>
@@ -207,7 +207,7 @@ permalink: /Project/
             tableElement.appendChild(table);
         };
 
-        function displayBarGraph(data, aspect) {
+        function displayBarGraph(aspect) {
             const data = barGraphData;
             let trace = {
             x: Object.values(data.Player),
@@ -226,7 +226,7 @@ permalink: /Project/
             Plotly.newPlot('barGraph', graphData, layout);
         };
 
-        function displayPieGraph(data, aspect) {
+        function displayPieGraph(aspect) {
             const data = pieGraphData;
             let trace = {
                 labels: Object.values(data.Player),
@@ -248,36 +248,36 @@ permalink: /Project/
             console.log('Data after fetch', data);
             displayTable(data); // Call the displayTable function with the received data
             // Add event listeners for each team
-            document.getElementById('team1').addEventListener('click', () => displayTable(data['Atlanta Hawks']));
-            document.getElementById('team2').addEventListener('click', () => displayTable(data['Boston Celtics']));
-            document.getElementById('team3').addEventListener('click', () => displayTable(data['Brooklyn Nets']));
-            document.getElementById('team4').addEventListener('click', () => displayTable(data['Charlotte Hornets']));
-            document.getElementById('team5').addEventListener('click', () => displayTable(data['Chicago Bulls']));
-            document.getElementById('team6').addEventListener('click', () => displayTable(data['Cleveland Cavaliers']));
-            document.getElementById('team7').addEventListener('click', () => displayTable(data['Dallas Mavericks']));
-            document.getElementById('team8').addEventListener('click', () => displayTable(data['Denver Nuggets']));
-            document.getElementById('team9').addEventListener('click', () => displayTable(data['Detroit Pistons']));
-            document.getElementById('team10').addEventListener('click', () => displayTable(data['Golden State Warriors']));
-            document.getElementById('team11').addEventListener('click', () => displayTable(data['Houston Rockets']));
-            document.getElementById('team12').addEventListener('click', () => displayTable(data['Indiana Pacers']));
-            document.getElementById('team13').addEventListener('click', () => displayTable(data['Los Angeles Clippers']));
-            document.getElementById('team14').addEventListener('click', () => displayTable(data['Los Angeles Lakers']));
-            document.getElementById('team15').addEventListener('click', () => displayTable(data['Memphis Grizzlies']));
-            document.getElementById('team16').addEventListener('click', () => displayTable(data['Miami Heat']));
-            document.getElementById('team17').addEventListener('click', () => displayTable(data['Milwaukee Bucks']));
-            document.getElementById('team18').addEventListener('click', () => displayTable(data['Minnesota Timberwolves']));
-            document.getElementById('team19').addEventListener('click', () => displayTable(data['New Orleans Pelicans']));
-            document.getElementById('team20').addEventListener('click', () => displayTable(data['New York Knicks']));
-            document.getElementById('team21').addEventListener('click', () => displayTable(data['Oklahoma City Thunder']));
-            document.getElementById('team22').addEventListener('click', () => displayTable(data['Orlando Magic']));
-            document.getElementById('team23').addEventListener('click', () => displayTable(data['Philadelphia 76ers']));
-            document.getElementById('team24').addEventListener('click', () => displayTable(data['Phoenix Suns']));
-            document.getElementById('team25').addEventListener('click', () => displayTable(data['Portland Trail Blazers']));
-            document.getElementById('team26').addEventListener('click', () => displayTable(data['Sacramento Kings']));
-            document.getElementById('team27').addEventListener('click', () => displayTable(data['San Antonio Spurs']));
-            document.getElementById('team28').addEventListener('click', () => displayTable(data['Toronto Raptors']));
-            document.getElementById('team29').addEventListener('click', () => displayTable(data['Utah Jazz']));
-            document.getElementById('team30').addEventListener('click', () => displayTable(data['Washington Wizards']));
+            document.getElementById('team1').addEventListener('click', () => displayTable(data['hawks']));
+            document.getElementById('team2').addEventListener('click', () => displayTable(data['celtics']));
+            document.getElementById('team3').addEventListener('click', () => displayTable(data['nets']));
+            document.getElementById('team4').addEventListener('click', () => displayTable(data['hornets']));
+            document.getElementById('team5').addEventListener('click', () => displayTable(data['bulls']));
+            document.getElementById('team6').addEventListener('click', () => displayTable(data['cavaliers']));
+            document.getElementById('team7').addEventListener('click', () => displayTable(data['mavericks']));
+            document.getElementById('team8').addEventListener('click', () => displayTable(data['nuggets']));
+            document.getElementById('team9').addEventListener('click', () => displayTable(data['pistons']));
+            document.getElementById('team10').addEventListener('click', () => displayTable(data['warriors']));
+            document.getElementById('team11').addEventListener('click', () => displayTable(data['rockets']));
+            document.getElementById('team12').addEventListener('click', () => displayTable(data['pacers']));
+            document.getElementById('team13').addEventListener('click', () => displayTable(data['clippers']));
+            document.getElementById('team14').addEventListener('click', () => displayTable(data['lakers']));
+            document.getElementById('team15').addEventListener('click', () => displayTable(data['grizzlies']));
+            document.getElementById('team16').addEventListener('click', () => displayTable(data['heat']));
+            document.getElementById('team17').addEventListener('click', () => displayTable(data['bucks']));
+            document.getElementById('team18').addEventListener('click', () => displayTable(data['timberwolves']));
+            document.getElementById('team19').addEventListener('click', () => displayTable(data['pelicans']));
+            document.getElementById('team20').addEventListener('click', () => displayTable(data['knicks']));
+            document.getElementById('team21').addEventListener('click', () => displayTable(data['thunder']));
+            document.getElementById('team22').addEventListener('click', () => displayTable(data['magic']));
+            document.getElementById('team23').addEventListener('click', () => displayTable(data['76ers']));
+            document.getElementById('team24').addEventListener('click', () => displayTable(data['suns']));
+            document.getElementById('team25').addEventListener('click', () => displayTable(data['blazers']));
+            document.getElementById('team26').addEventListener('click', () => displayTable(data['kings']));
+            document.getElementById('team27').addEventListener('click', () => displayTable(data['spurs']));
+            document.getElementById('team28').addEventListener('click', () => displayTable(data['raptors']));
+            document.getElementById('team29').addEventListener('click', () => displayTable(data['jazz']));
+            document.getElementById('team30').addEventListener('click', () => displayTable(data['wizards']));
 
             document.getElementById('bar1').addEventListener('click', () => displayBarGraph(data, 'Points'));
             document.getElementById('bar2').addEventListener('click', () => displayBarGraph(data, 'Assists'));
