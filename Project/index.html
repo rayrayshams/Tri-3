@@ -315,12 +315,15 @@ window.onload = wrap_img;
             document.getElementById('team29').addEventListener('click', () => selectTeam('jazz'));
             document.getElementById('team30').addEventListener('click', () => selectTeam('wizards'));
         
-      function selectTeam(teamName) {
+    function selectTeam(teamName) {
+
         barGraphData = tableData[teamName];
         pieGraphData = tableData[teamName];
-      }
+        displayBarGraph("Points")
+        displayPieGraph("Points")
+    }
 
-      function displayTable(teamName) {
+    function displayTable(teamName) {
         var team = teamName;
         const data = tableData[teamName];
         const tableElement = document.getElementById('table');
@@ -350,7 +353,8 @@ window.onload = wrap_img;
         // Clear the table element and append the new table
         tableElement.innerHTML = '';
         tableElement.appendChild(table);
-        };
+        selectTeam(teamName);
+    };
     
     document.getElementById('bar1').addEventListener('click', () => displayBarGraph('Points'));
     document.getElementById('bar2').addEventListener('click', () => displayBarGraph('Assists'));
