@@ -181,6 +181,7 @@ window.onload = wrap_img;
     <div class="dropdown">
         <span>Pick a Team</span>
         <div class="dropdown-content">
+            <div class="dropdown-item" id="team0">All Players</div>
             <div class="dropdown-item" id="team1">Atlanta Hawks</div>
             <div class="dropdown-item" id="team2">Boston Celtics</div>
             <div class="dropdown-item" id="team3">Brooklyn Nets</div>
@@ -238,6 +239,10 @@ window.onload = wrap_img;
         </div>
     </div>
     <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <div id="table"></div>
     <br />
     <div id="barGraph"></div>
@@ -245,14 +250,19 @@ window.onload = wrap_img;
     <div id="pieGraph"></div>
 
 <script>
+
+    const tableContainer = document.getElementById("table");
+    const barGraphContainer = document.getElementById("barGraph");
+    const pieGraphContainer = document.getElementById("pieGraph");
         
-    fetch('http://127.0.0.1:8086/api/graphs/')
+    fetch('https://petitepandas.duckdns.org/api/graphs/')
       .then(response => response.json())
       .then(data => {
             var tableData = data;
             var barGraphData = null;
             var pieGraphData = null;
             // Add event listeners for each team
+            document.getElementById('team0').addEventListener('click', () => displayAll(tableData));
             document.getElementById('team1').addEventListener('click', () => displayTable('hawks'));
             document.getElementById('team2').addEventListener('click', () => displayTable('celtics'));
             document.getElementById('team3').addEventListener('click', () => displayTable('nets'));
@@ -284,52 +294,39 @@ window.onload = wrap_img;
             document.getElementById('team29').addEventListener('click', () => displayTable('jazz'));
             document.getElementById('team30').addEventListener('click', () => displayTable('wizards'));
 
-            document.getElementById('team1').addEventListener('click', () => selectTeam('hawks'));
-            document.getElementById('team2').addEventListener('click', () => selectTeam('celtics'));
-            document.getElementById('team3').addEventListener('click', () => selectTeam('nets'));
-            document.getElementById('team4').addEventListener('click', () => selectTeam('hornets'));
-            document.getElementById('team5').addEventListener('click', () => selectTeam('bulls'));
-            document.getElementById('team6').addEventListener('click', () => selectTeam('cavaliers'));
-            document.getElementById('team7').addEventListener('click', () => selectTeam('mavericks'));
-            document.getElementById('team8').addEventListener('click', () => selectTeam('nuggets'));
-            document.getElementById('team9').addEventListener('click', () => selectTeam('pistons'));
-            document.getElementById('team10').addEventListener('click', () => selectTeam('warriors'));
-            document.getElementById('team11').addEventListener('click', () => selectTeam('rockets'));
-            document.getElementById('team12').addEventListener('click', () => selectTeam('pacers'));
-            document.getElementById('team13').addEventListener('click', () => selectTeam('clippers'));
-            document.getElementById('team14').addEventListener('click', () => selectTeam('lakers'));
-            document.getElementById('team15').addEventListener('click', () => selectTeam('grizzlies'));
-            document.getElementById('team16').addEventListener('click', () => selectTeam('heat'));
-            document.getElementById('team17').addEventListener('click', () => selectTeam('bucks'));
-            document.getElementById('team18').addEventListener('click', () => selectTeam('timberwolves'));
-            document.getElementById('team19').addEventListener('click', () => selectTeam('pelicans'));
-            document.getElementById('team20').addEventListener('click', () => selectTeam('knicks'));
-            document.getElementById('team21').addEventListener('click', () => selectTeam('thunder'));
-            document.getElementById('team22').addEventListener('click', () => selectTeam('magic'));
-            document.getElementById('team23').addEventListener('click', () => selectTeam('76ers'));
-            document.getElementById('team24').addEventListener('click', () => selectTeam('suns'));
-            document.getElementById('team25').addEventListener('click', () => selectTeam('blazers'));
-            document.getElementById('team26').addEventListener('click', () => selectTeam('kings'));
-            document.getElementById('team27').addEventListener('click', () => selectTeam('spurs'));
-            document.getElementById('team28').addEventListener('click', () => selectTeam('raptors'));
-            document.getElementById('team29').addEventListener('click', () => selectTeam('jazz'));
-            document.getElementById('team30').addEventListener('click', () => selectTeam('wizards'));
-        
+       
     function selectTeam(teamName) {
 
         barGraphData = tableData[teamName];
         pieGraphData = tableData[teamName];
-        displayBarGraph("Points")
-        displayPieGraph("Points")
+        barGraphContainer.innerHTML = ''
+        pieGraphContainer.innerHTML = ''
+        //displayBarGraph("Points")
+        //displayPieGraph("Points")
     }
+
+    function displayAll(tableData){
+        alert("display all");
+        tableData.forEach((v) => {
+            alert("team:",v.teamName);
+            displayTable(v.teamName);
+
+        });
+
+    }
+
 
     function displayTable(teamName) {
         var team = teamName;
-        const data = tableData[teamName];
+        const data = tableData[teamName]; //display_table(teamName);
         const tableElement = document.getElementById('table');
         const table = document.createElement('table');
-        const headerRow = document.createElement('tr');
 
+        const teamNameRow = document.createElement('tr');
+        teamNameRow.textContent = teamName;
+        table.appendChild(teamNameRow);
+
+        const headerRow = document.createElement('tr');
         // Create the table header row
         for (const column of Object.keys(data)) {
             const headerCell = document.createElement('th');
@@ -339,6 +336,7 @@ window.onload = wrap_img;
         table.appendChild(headerRow);
 
         // Iterate over the keys of the Player object and retrieve the corresponding data
+        //alert(Object.values(data[0]));
         const playerKeys = Object.keys(data['Player']);
         for (const key of playerKeys) {
             const bodyRow = document.createElement('tr');
@@ -350,10 +348,15 @@ window.onload = wrap_img;
             table.appendChild(bodyRow);
         };
 
+
         // Clear the table element and append the new table
         tableElement.innerHTML = '';
         tableElement.appendChild(table);
         selectTeam(teamName);
+        //test code
+        alert("call graph display_table method");
+        display_table(teamName);
+        alert("after graph display_table method ");
     };
     
     document.getElementById('bar1').addEventListener('click', () => displayBarGraph('Points'));
