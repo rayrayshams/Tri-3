@@ -233,9 +233,9 @@ permalink: /Project/
     }
 
     function displayAll(tableData){
-        alert("display all");
+        //alert("display all");
         tableData.forEach((v) => {
-            alert("team:",v.teamName);
+            //alert("team:",v.teamName);
             displayTable(v.teamName);
 
         });
@@ -281,9 +281,9 @@ permalink: /Project/
         tableElement.appendChild(table);
         selectTeam(teamName);
         //test code
-        alert("call graph display_table method");
+        //alert("call graph display_table method");
         display_table(teamName);
-        alert("after graph display_table method ");
+        //alert("after graph display_table method ");
     };
     
     document.getElementById('bar1').addEventListener('click', () => displayBarGraph('Points'));
