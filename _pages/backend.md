@@ -101,5 +101,46 @@ title: Backend Test
     };
 
   </script>
+  <script>
+
+
+
+
+  function sortTable(columnIndex) {
+   
+  }
+
+  function displayTable(data) {
+    const tableElement = document.getElementById('table');
+
+    /
+    const table = document.createElement('table');
+
+    
+    const headerRow = document.createElement('tr');
+    for (const column of Object.keys(data)) {
+        const headerCell = document.createElement('th');
+        headerCell.textContent = column;
+        headerCell.addEventListener('click', function() {
+            sortTable(Array.from(headerRow.children).indexOf(headerCell));
+        });
+        headerRow.appendChild(headerCell);
+    }
+    table.appendChild(headerRow);
+
+    
+    tableElement.innerHTML = '';
+    tableElement.appendChild(table);
+  }
+
+  function displayBarGraph(data) {
+   
+  }
+
+  function displayPieGraph(data) {
+ 
+  }
+</script>
+
 </body>
 </html>
