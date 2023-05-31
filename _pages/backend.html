@@ -64,7 +64,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/T3Project/Project/">Project</a><a class="page-link" href="/T3Project/DataAnalysisProject/">Data Analysis Project</a><a class="page-link" href="/T3Project/TEST/">Test Frontend</a><a class="page-link" href="/T3Project/_pages/backend.html">Backend Test</a><a class="page-link" href="/T3Project/okay/">PLEASE WORK!</a></div>
+        <div class="trigger"><a class="page-link" href="/T3Project/Project/">Project</a><a class="page-link" href="/T3Project/DataAnalysisProject/">Data Analysis Project</a><a class="page-link" href="/T3Project/TEST/">Test Frontend</a><a class="page-link" href="/T3Project/_pages/backend.html">Backend Test</a><a class="page-link" href="/T3Project/okay/">PLEASE WORK!</a><a class="page-link" href="/T3Project/_pages/updatedkrishiv.html">Updated Backend Test</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -174,6 +174,47 @@ window.onload = wrap_img;
     };
 
   </script>
+  <script>
+
+
+
+
+  function sortTable(columnIndex) {
+   
+  }
+
+  function displayTable(data) {
+    const tableElement = document.getElementById('table');
+
+    /
+    const table = document.createElement('table');
+
+    
+    const headerRow = document.createElement('tr');
+    for (const column of Object.keys(data)) {
+        const headerCell = document.createElement('th');
+        headerCell.textContent = column;
+        headerCell.addEventListener('click', function() {
+            sortTable(Array.from(headerRow.children).indexOf(headerCell));
+        });
+        headerRow.appendChild(headerCell);
+    }
+    table.appendChild(headerRow);
+
+    
+    tableElement.innerHTML = '';
+    tableElement.appendChild(table);
+  }
+
+  function displayBarGraph(data) {
+   
+  }
+
+  function displayPieGraph(data) {
+ 
+  }
+</script>
+
 </body>
 </html>
 

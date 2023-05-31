@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>PLEASE WORK! | PetitePandas</title>
+<title>Updated Backend Test | PetitePandas</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="PLEASE WORK!" />
+<meta property="og:title" content="Updated Backend Test" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Franchise" />
 <meta property="og:description" content="Franchise" />
-<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/okay/" />
-<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/okay/" />
+<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/_pages/updatedkrishiv.html" />
+<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/_pages/updatedkrishiv.html" />
 <meta property="og:site_name" content="PetitePandas" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="PLEASE WORK!" />
+<meta property="twitter:title" content="Updated Backend Test" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Franchise","headline":"PLEASE WORK!","url":"https://paravsalaniwal.github.io/T3Project/okay/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Franchise","headline":"Updated Backend Test","url":"https://paravsalaniwal.github.io/T3Project/_pages/updatedkrishiv.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/T3Project/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://paravsalaniwal.github.io/T3Project/feed.xml" title="PetitePandas" /><link rel="shortcut icon" type="image/x-icon" href="/T3Project/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,85 +72,130 @@ window.onload = wrap_img;
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">PLEASE WORK!</h1>
+    <h1 class="post-title">Updated Backend Test</h1>
   </header>
 
   <div class="post-content">
-    <html lang="en">
+    <html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.1/dist/index.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
-    <title>Document</title>
+  <title>Graphs</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    <div id="plot_div"></div>
-    <br />
-    <div id="bar_plot"></div>
-    <br />
-    <div id="pie_plot" style="width: 400px; height: 300px;"></div>
-    <script>
-        dfd.read_csv("https://raw.githubusercontent.com/paravsalaniwal/T3Project/master/_notebooks/files/warriors.csv")
-            .then(df => {
-                var layout = {
-                    title: 'WARRIORS CHART',
-                    xaxis: {title: 'Player'},
-                    yaxis: {title: 'Count'}
-                };
-                var barLayout = {
-                    title: 'WARRIORS BAR CHART',
-                    xaxis: {title: 'Player'},
-                    yaxis: {title: 'Count'}
-                };
-                var pieData = {
-                    labels: df.index,
-                    datasets: [{
-                        label: 'WARRIORS PIE CHART',
-                        data: df.column("Points"),
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.5)',
-                            'rgba(54, 162, 235, 0.5)',
-                            'rgba(255, 206, 86, 0.5)',
-                            'rgba(75, 192, 192, 0.5)',
-                            'rgba(153, 102, 255, 0.5)',
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                        ],
-                        borderWidth: 1
-                    }]
-                };
-                var new_df = df.set_index({ key: df.columns[0] });
-                new_df.plot("plot_div").line({ columns: ["Points"], layout: layout });
-                new_df.plot("bar_plot").bar({ columns: ["Points"], layout: barLayout });
-                new Chart(document.getElementById('pie_plot'), {
-                    type: 'pie',
-                    data: pieData,
-                    options: {
-                        responsive: true,
-                        plugins: {
-                            legend: {
-                                position: 'top',
-                            },
-                            title: {
-                                display: true,
-                                text: 'WARRIORS PIE CHART'
-                            }
-                        }
-                    }
-                });
-            })
-            .catch(err => {
-                console.log(err);
-            });
-    </script>
-</body>
-</html>
+  <div id="table"></div>
+  <br />
+  <div id="barGraph"></div>
+  <br />
+  <div id="pieGraph"></div>
+
+  <script>
+    // Fetch data from the API endpoint
+    fetch('https://petitepandas.duckdns.org/api/graphs')
+      .then(response => response.json())
+      .then(data => {
+        // Display the table
+        displayTable(data);
+
+        // Display the bar graph
+        displayBarGraph(data);
+
+        // Display the pie graph
+        displayPieGraph(data);
+      })
+      .catch(error => console.log(error));
+
+    function displayTable(data) {
+      // Get the table element
+      const tableElement = document.getElementById('table');
+
+      // Create the table
+      const table = document.createElement('table');
+
+      // Create the table header row
+      const headerRow = document.createElement('tr');
+      for (const column of Object.keys(data)) {
+        const headerCell = document.createElement('th');
+        headerCell.textContent = column;
+        headerCell.addEventListener('click', function() {
+          sortTable(Array.from(headerRow.children).indexOf(headerCell));
+        });
+        headerRow.appendChild(headerCell);
+      }
+      table.appendChild(headerRow);
+
+      // Iterate over the keys of the Player object and retrieve the corresponding data
+      const playerKeys = Object.keys(data.Player);
+      for (const key of playerKeys) {
+        const bodyRow = document.createElement('tr');
+        for (const column of Object.keys(data)) {
+          const bodyCell = document.createElement('td');
+          bodyCell.textContent = data[column][key];
+          bodyRow.appendChild(bodyCell);
+        }
+        table.appendChild(bodyRow);
+      }
+
+      // Clear the table element and append the new table
+      tableElement.innerHTML = '';
+      tableElement.appendChild(table);
+    }
+
+    function displayBarGraph(data) {
+      let trace = {
+        x: Object.values(data.Player),
+        y: Object.values(data.Points),
+        type: 'bar'
+      };
+
+      let layout = {
+        title: 'Player Points',
+        xaxis: { title: 'Player' },
+        yaxis: { title: 'Points' }
+      };
+
+      let graphData = [trace];
+
+      Plotly.newPlot('barGraph', graphData, layout);
+    };
+
+    function displayPieGraph(data) {
+      let trace = {
+        labels: Object.values(data.Player),
+        values: Object.values(data.Points),
+        type: 'pie'
+      };
+
+      let layout = {
+        title: 'Points Distribution by Players'
+      };
+
+      let graphData = [trace];
+
+      Plotly.newPlot('pieGraph', graphData, layout);
+    };
+
+    function sortTable(columnIndex) {
+      var table, rows, switching, i, x, y, shouldSwitch;
+      table = document.querySelector('#table table');
+      switching = true;
+
+      while (switching) {
+        switching = false;
+        rows = table.rows;
+
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("td")[columnIndex];
+          y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+    }
+</script></body></html>
 
   </div>
 
