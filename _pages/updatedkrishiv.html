@@ -4,22 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>PetitePandas | Franchise</title>
+<title>Updated Backend Test | PetitePandas</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="PetitePandas" />
+<meta property="og:title" content="Updated Backend Test" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Franchise" />
 <meta property="og:description" content="Franchise" />
-<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/" />
-<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/" />
+<link rel="canonical" href="https://paravsalaniwal.github.io/T3Project/_pages/updatedkrishiv.html" />
+<meta property="og:url" content="https://paravsalaniwal.github.io/T3Project/_pages/updatedkrishiv.html" />
 <meta property="og:site_name" content="PetitePandas" />
-<meta property="og:image" content="https://paravsalaniwal.github.io/T3Project/images/logo.png" />
 <meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://paravsalaniwal.github.io/T3Project/images/logo.png" />
-<meta property="twitter:title" content="PetitePandas" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Updated Backend Test" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Franchise","headline":"PetitePandas","image":"https://paravsalaniwal.github.io/T3Project/images/logo.png","name":"PetitePandas","url":"https://paravsalaniwal.github.io/T3Project/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Franchise","headline":"Updated Backend Test","url":"https://paravsalaniwal.github.io/T3Project/_pages/updatedkrishiv.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/T3Project/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://paravsalaniwal.github.io/T3Project/feed.xml" title="PetitePandas" /><link rel="shortcut icon" type="image/x-icon" href="/T3Project/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,76 +69,138 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><div style="display: flex; justify-content: center; width: 100%; "> 
-  <img src="https://github.com/paravsalaniwal/firstrepo/assets/111609656/ebead97a-f2cb-4378-a35e-7a8522502be5" />
-</div>
+        <article class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Updated Backend Test</h1>
+  </header>
+
+  <div class="post-content">
+    <html>
+<head>
+  <title>Graphs</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
 <body>
+  <div id="table"></div>
+  <br />
+  <div id="barGraph"></div>
+  <br />
+  <div id="pieGraph"></div>
 
-  <div style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-items: center;">
-    <h1 id="typewriter" style="text-align: center;">
-  &lt;/div&gt;
+  <script>
+    // Fetch data from the API endpoint
+    fetch('https://petitepandas.duckdns.org/api/graphs')
+      .then(response => response.json())
+      .then(data => {
+        // Display the table
+        displayTable(data);
 
-&lt;/body&gt;
-<script>
-  var i = 0;
-  var txt = "Welcome to the best franchise in APCS history.";
+        // Display the bar graph
+        displayBarGraph(data);
 
-  var speed = 50;
-  function typeWriter(x) {
+        // Display the pie graph
+        displayPieGraph(data);
+      })
+      .catch(error => console.log(error));
 
-    if (i <= txt.length) {
-      document.getElementById("typewriter").innerHTML = txt.substring(0, i)
-      i++;
-      setTimeout(typeWriter, speed);
+    function displayTable(data) {
+      // Get the table element
+      const tableElement = document.getElementById('table');
+
+      // Create the table
+      const table = document.createElement('table');
+
+      // Create the table header row
+      const headerRow = document.createElement('tr');
+      for (const column of Object.keys(data)) {
+        const headerCell = document.createElement('th');
+        headerCell.textContent = column;
+        headerCell.addEventListener('click', function() {
+          sortTable(Array.from(headerRow.children).indexOf(headerCell));
+        });
+        headerRow.appendChild(headerCell);
+      }
+      table.appendChild(headerRow);
+
+      // Iterate over the keys of the Player object and retrieve the corresponding data
+      const playerKeys = Object.keys(data.Player);
+      for (const key of playerKeys) {
+        const bodyRow = document.createElement('tr');
+        for (const column of Object.keys(data)) {
+          const bodyCell = document.createElement('td');
+          bodyCell.textContent = data[column][key];
+          bodyRow.appendChild(bodyCell);
+        }
+        table.appendChild(bodyRow);
+      }
+
+      // Clear the table element and append the new table
+      tableElement.innerHTML = '';
+      tableElement.appendChild(table);
     }
 
-  }
+    function displayBarGraph(data) {
+      let trace = {
+        x: Object.values(data.Player),
+        y: Object.values(data.Points),
+        type: 'bar'
+      };
 
-  typeWriter();
+      let layout = {
+        title: 'Player Points',
+        xaxis: { title: 'Player' },
+        yaxis: { title: 'Points' }
+      };
 
-</script>
-</h1></div></body>
+      let graphData = [trace];
 
+      Plotly.newPlot('barGraph', graphData, layout);
+    };
 
+    function displayPieGraph(data) {
+      let trace = {
+        labels: Object.values(data.Player),
+        values: Object.values(data.Points),
+        type: 'pie'
+      };
 
-  
+      let layout = {
+        title: 'Points Distribution by Players'
+      };
 
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
+      let graphData = [trace];
 
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
+      Plotly.newPlot('pieGraph', graphData, layout);
+    };
 
- 
-  
+    function sortTable(columnIndex) {
+      var table, rows, switching, i, x, y, shouldSwitch;
+      table = document.querySelector('#table table');
+      switching = true;
 
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
-        <h3>
-          <a class="post-link" href="/T3Project/student/2023/04/25/Combined-Lesson-Plan.html">
-            P5-Y 4/25 Data Analysis with Numpy &amp; Pandas
-          </a>
-        </h3>
-        <p class="post-meta-description">A series of lessons based on the utilization of Pandas and NumPy to read and create interesting things with files and data. By Soham K, Tay K, Rohan A, Parav S, Krishiv M, Jonathan W</p>
-          <p class="post-meta">Apr 25, 2023</p>
-      </div>
-  </div></li><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
-        <h3>
-          <a class="post-link" href="/T3Project/2023/04/25/Data-Analysis-Panda-Numpy.html">
-            Petite Pandas Data Analysis using Pandas and NumPy
-          </a>
-        </h3>
-        <p class="post-meta-description">A series of lessons based on the utilization of Pandas and NumPy to read and create interesting things with files and data.</p>
-          <p class="post-meta">Apr 25, 2023</p>
-      </div>
-  </div></li></ul>
+      while (switching) {
+        switching = false;
+        rows = table.rows;
 
-    </div>
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("td")[columnIndex];
+          y = rows[i + 1].getElementsByTagName("td")[columnIndex];
+
+          if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+            shouldSwitch = true;
+            break;
+          }
+        }
+      }
+    }
+</script></body></html>
+
+  </div>
+
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/T3Project/"></data>
